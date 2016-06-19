@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+</style>
+<script>
+</script>
+</head>
+<body>
+<form  onsubmit="return false">
+	<input  id="search_data" placeholder="Search" required>
+	<button onclick="clicker()" required>Search</button>
+</form>
+<div>
+</div>
+<script>
+var count = 0;
+
+function clicker() {
+	count=count+1;
+	if(count == 1)
+	searchFunction();
+	if(count > 1){
+		var deletable = document.getElementsByClassName("searchresults");
+		while(deletable[0]){
+		searchesR.parentNode.removeChild(deletable[0]);
+		}
+		searchFunction();
+	}
+}
+
+var x = 0;
+function threadNumber() {
+	while(true) {
+		var y = document.getElementsByTagName("p")[x].textContent;
+		if(y != "") {
+		x = x + 1;
+		}
+		else
+		break;
+	}
+}
+
+var currentDiv = document.getElementById("searchesR");
+function searchFunction() {
+	threadNumber();
+	var i= 0;
+	while(true) {
+		if(i >= x){
+		break;
+		}
+		else {
+			var searchData = document.getElementById("search_data").value;
+			var str = document.getElementsByTagName("p")[i].textContent;
+			var res = str.match(searchData);
+			if(res == null)
+			i++;
+
+			else {
+			document.getElementsByTagName("a")[i].setAttribute("display", "block");
+			i++;
+			}
+		}
+	}
+}
+</script>
+
+</body>
+</html>

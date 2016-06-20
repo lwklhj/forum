@@ -1,0 +1,35 @@
+li{
+	list-style-type: none;
+	display: inline;
+}
+nav ul{
+	display: inline;
+}
+nav ul li{
+	padding: 10px;
+	font-size: 20px;
+	display: inline-block;
+	float:right;
+
+}
+nav ul li a{
+	color: blue;
+}
+a{
+	text-decoration: none;
+}
+header{
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 15px;
+	padding-right: -15px;
+}
+header img{
+	float:left;
+	padding-top: 10px;
+
+}
+
+
+
+

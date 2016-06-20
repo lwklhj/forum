@@ -1,0 +1,87 @@
+.ui_menu_item ul a{
+	position:relative;
+	display: block;
+	width: 193px;
+	height:30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	box-shadow: 1px 1px 2px 2px #777777;
+	float:left;
+	left:60px;
+	color:white;
+	margin: 5px;
+	background-color: #90C3D4;
+}
+ul{
+	
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 20px;
+	
+	
+}
+section{
+	position: block;
+	top: 115px;
+	display: block;
+	border:1px solid #e6e6e6;
+	width:90%;
+	height:300px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 5px;
+}
+a{
+	color: black;
+	text-decoration: none;
+}
+.container_item ul{
+	border:1px solid blue
+	
+	
+
+}
+li{
+
+	list-style-type: none;
+	/*display: inline-block;
+	width: 240px;
+	height:50px;
+	text-align: center;
+	box-shadow: 1px 1px 2px 2px #777777;*/
+	
+}
+audio{
+	position: fixed;
+}
+
+
+/*img.courseIcon{
+	width: 400;
+	height:50;
+
+}
+table{
+	width: 100%;
+	border-collapse: collapse;
+}
+section{
+	margin: 100px;
+}
+dl{
+	display: inline-block;
+	border:1px solid black;
+	vertical-align: text-bottom;
+
+}
+dt dd{
+}
+	
+
+dd{
+	display: block;
+	-webkit-margin-start: 40px;
+}*/

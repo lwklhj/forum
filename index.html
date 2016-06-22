@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>NYP forum</title>
-	<!--<link rel="stylesheet" type="text/css" href="css/nav.css">-->
+	<title>NYP Forum</title>
 	<link rel="stylesheet" type="text/css" href="css/mainPage.css">
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/hoverFunction.js"></script>
+	<script type="text/javascript" src="js/jquery-3.0.0.js"></script>
+	<script type="text/javascript" src="js/mainPage.js"></script>
 </head>
 <body>
-	<header>
-		<img src="img/logo/logo.jpg" alt="" >
-		<nav>
-		
-		</nav>
-	</header>
+	<nav>
+		<a href="#"><img src="img/logo/logo.jpg"></a>
+		<button type="button">Login</button>
+		<button type="button">About</button>
+	</nav>
+	<!-- For banner-->
 	<section>
-	<!-- banner-->
-	</section>
-	<div class="wrapper">
 		
-		<section class="academic">
-		<h1>Academic</h1>
-			<article class="ui_menu_item">
-				<ul>
-					<li><a class="menu_item">Information Technology</a></li>
-					<li><a class="menu_item">Engineering</a></li>
-					<li><a class="menu_item">Design</a></li>
-					<li><a class="menu_item">Business Management</a></li>
-					<li><a class="menu_item">Health Science</a></li>
-					<li><a class="menu_item">Chemical and Life Science</a></li>
-					<li><a class="menu_item">Interactive & Digital Media</a></li>
-				</ul>	
-			</article>
-			<<article class="container_item">
+	</section>
+	<!-- For academic-->
+	
+	<section>
+	<hr>
+	<h1>Academic</h1>
+		<article class="menu_container">
+			
+			<div class="menu_wrapper">
+			<a class="menu_item">Information Technology</a>
+			<a class="menu_item">Engineering</a>
+			<a class="menu_item">Design</a>
+			<a class="menu_item">Business Management</a>
+			<a class="menu_item">Health Science</a>
+			<a class="menu_item">Chemical and Life Science</a>
+			<a class="menu_item">Interactive & Digital Media</a>
+			</div>
+		</article>
+		<hr class="hrDot">
+		<article class="item_container">
 				<ul>
 					<li><a href=""><img src="" alt="" class="courseIcon">Information Technology</a></li>
 					<li><a href=""><img src="" alt="" class="courseIcon">Engineering Informatics</a></li>
@@ -93,197 +95,47 @@
 					<li><a href=""><img src="" alt="" class="courseIcon">Motion Graphics and Broadcast Design</a></li>
 					<li><a href=""><img src="" alt="" class="courseIcon">Game Development & Technology</a></li>
 				</ul>
-
-			</article>
-		
-		</section>
-		<audio controls loop autoplay>
-			<source src="audio/yousa.mp3" type="audio/mp3">
-			<source src="audio/奸雄.mp3" type="audio/mp3">
-			Your browser does not support the audio tag
-		</audio>
-	</div>
-
+			
+		</article>
+	</section>
 	
+	<!-- For cca-->
 
-
-
-
-
-
-
-
-
-
-	<!--<section class="academic">
-		<ul>
-			<li>SIT</li>
-			<li>SOE</li>
-			<li>SOD</li>
-			<li>SBM</li>
-			<li>SHS</li>
-			<li>SCL</li>
-			<li>SID</li>
-		</ul>
-
-		<article class="sit">
-			<table>
-				<tbody>
-					<tr>
-						<td>
-							<li><a href=""><img src="img/logo/sitlogo.png" alt="" class="courseIcon"></a></li>
-							<dl>
-								<dt><a href="">Information Technology</a></dt>
-								<dd>Discuss about Information Technology</dd>
-								
-							</dl>
-						</td>
-						<td>
-							<li><a href=""><img src="img/logo/sitlogo.png" alt="" class="courseIcon"></a></li>
-							<dl>
-								<dt><a href="">Engineering Informatics</a></dt>
-								<dd>Discuss about Engineering Informatics</dd>
-								
-							</dl>
-						</td>
-						<td>
-							<li><a href=""><img src="img/logo/sitlogo.png" alt="" class="courseIcon"></a></li>
-							<dl>
-								<dt><a href="">Business Informatics</a></dt>
-								<dd>Discuss about Business Informatics</dd>
-								
-							</dl>
-							
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<li><a href=""><img src="img/logo/sitlogo.png" alt="" class="courseIcon"></a></li>
-							<dl>
-								<dt><a href="">Cyber Security & Forensics</a></dt>
-								<dd>Discuss about Cyber Security & Forensics</dd>
-							</dl>
-						</td>
-						<td>
-							<li><a href=""><img src="img/logo/sitlogo.png" alt="" class="courseIcon"></a></li>
-							<dl>
-								<dt><a href="">Enterprise IT</a></dt>
-								<dd>Discuss about Enterprise IT</dd>
-							</dl>
-						</td>
-						<td>
-							<li><a href=""><img src="img/logo/sitlogo.png" alt="" class="courseIcon"></a></li>
-							<dl>
-								<dt><a href="">Intelligence & Analytics</a></dt>
-								<dd>Discuss about Cyber Security & Forensics</dd>
-							</dl>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<li><a href=""><img src="img/logo/sitlogo.png" alt="" class="courseIcon"></a></li>
-							<dl>
-								<dt><a href="">Financial Informatics</a></dt>
-								<dd>Discuss about Financial Informatics</dd>
-							</dl>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-
-			<ul>
-				<li><a href=""><img src="" alt="" class="courseIcon">Information Technology</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Engineering Informatics</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Business Informatics</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Cyber Security & Forensics</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Business Enterprise IT</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Business Intelligence & Analytics</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Financial Informatics</a></li>
-			</ul>
+	<section>
+	<hr>
+	<h1>CCA</h1>
+		<article class="menu_container">
+			<div class="menu_wrapper">
+				<a class="menu_item"></a>
+				<a class="menu_item"></a>
+				<a class="menu_item"></a>
+				<a class="menu_item"></a>
+				<a class="menu_item"></a>
+				<a class="menu_item"></a>
+				<a class="menu_item"></a>
+			</div>
 		</article>
-		<!--<article class="soe">
-			<ul>
-				<li><a href=""><img src="" alt="" class="courseIcon">Aerospace</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Infocomm & Media</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Manufacturing & Mechatronics</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Electrical & Electronics</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Biomedical & Materials Science</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Business</a></li>
-			</ul>
+		<hr class="hrDot">
+		<article class="item_container">
 			
 		</article>
-		<article class="sod">
-			<ul>
-				<li><a href=""><img src="" alt="" class="courseIcon">Industrial Design</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Spatial Design</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Visual Communication</a></li>
-			</ul>
-		</article>
-
-		<article class="sbm">
-			<ul>
-				<li><a href=""><img src="" alt="" class="courseIcon">Accountancy & Finance</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Business Management</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Food & Beverage Business</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Fund Management & Administration</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Hospitality & Tourism Management</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Marketing</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Mass Media Management</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Sport & Wellness Management </a></li>
-				<li><a href=""></a></li>
-			</ul>
-			
-		</article>
-		<article class="shs">
-			<ul>
-				<li><a href=""><img src="" alt="" class="courseIcon">Nursing</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Oral Health Therapy</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Social Sciences (Social Work)</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Occupational Therapy</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Physiotherapy</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Diagnostic Radiography</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Radiation Therapy</a></li>
-			</ul>
-			
-		</article>
-		<article class="cls">
-			<ul>
-				<li><a href=""><img src="" alt="" class="courseIcon">Medicinal Chemistry</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Biologis & Process Technology</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Chemical & Green Technology</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Pharmaceutical Science</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Food Science & Nutrition</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Chemical & Pharmaceutical Technology</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Molecular Biotechnology</a></li>
-			</ul>
-			
-		</article>
-		<article class="sid">
-			<ul>
-				<li><a href=""><img src="" alt="" class="courseIcon">Digital Visual Effects</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Interaction Design </a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Digital Game Art & Design</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Animation</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Motion Graphics and Broadcast Design</a></li>
-				<li><a href=""><img src="" alt="" class="courseIcon">Game Development & Technology</a></li>
-			</ul>
-			
-		</article>
-
-		
-		
 	</section>
-	<section class="cca">
-		
+	
+	<!-- For other-->
+	<section>
+	<hr>
+	<h1>Other</h1>
+		<article class="menu_container">
+			<div class="menu_wrapper">
+			</div>
+		</article>
+		<hr class="hrDot">
+		<article class="item_container">
+			
+		</article>
 	</section>
-	<section class="other">
-		
-	</section>-->
-
 	<footer>
 		
 	</footer>
-	
-
 </body>
 </html>

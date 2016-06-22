@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<!- use document.cookie to get username ->
+<html>
+	<head>
+		<style>
+			* {margin: 0; padding: 0;}
+
+			navv {position: absolute; top: 0; right 0;}
+
+			nav button {float: right; margin: 10px;}
+
+			nav p {float: right;}
+
+			hrr {border: 1px solid black;}
+
+			#loginBox {position: absolute; width: 250px; height: 120px; border: 1px solid black; top: 50%; right:50%}
+
+			#closeLoginbox {float: right;}
+
+		</style>
+
+		<script>
+			window.onload = function() {LoginOnload();}
+		</script>
+	</head>
+	<body>
+		<nav>
+			<a href="#"><img src="img/logo/logo.jpg"></a>
+			<button type="button" id="loginButton" onclick="loginator()">Login</button>
+			<p id="loginWelcome"></p>
+			<button style="display: none;" id="loginLogout" onclick="logoutinator()" required>Log Out</button>
+		</nav>
+
+		<form id="loginBox" style="display: none;" onsubmit="loginSubmit(); this.reset(); return false;">
+			<button id="closeLoginbox" onclick="loginXbox()">X</button>
+			Username:<br><input id="loginData" required><br>
+			Password:<br><input id="loginPW" type="password" required>
+			<button onclick="loginSubmit()" required>Submit</button>
+		</form>
+		<hr></hr>
+		<script>
+			var LoginName;
+			function loginator() {
+				document.getElementById("loginBox").setAttribute("style", "display: block");
+			}
+
+			function loginXbox() {
+				document.getElementById("loginBox").setAttribute("style", "display: none");
+			}
+
+			function loginSubmit() {
+				if(document.getElementById("loginData").value == "")
+				return false;
+				if(document.getElementById("loginPW").value == "")
+				return false;
+				else {
+					loginName = document.getElementById("loginData").value;
+					document.getElementById("loginWelcome").innerHTML = ("Welcome " + loginName);
+					document.getElementById("loginButton").setAttribute("style", "display: none");
+					document.getElementById("loginBox").setAttribute("style", "display: none");
+
+					document.getElementById("loginLogout").setAttribute("style", "display: block");
+					document.cookie = loginName;
+				}
+			}
+
+			function loginKeep() {
+				loginName = document.cookie;
+				document.getElementById("loginWelcome").innerHTML = ("Welcome " + loginName);
+				document.getElementById("loginBox").setAttribute("style", "display: none");
+				document.getElementById("loginButton").setAttribute("style", "display: none");
+				document.getElementById("loginLogout").setAttribute("style", "display: block");
+
+			}
+
+			function logoutinator() {
+				document.getElementById("loginWelcome").innerHTML = "";
+				document.getElementById("loginLogout").setAttribute("style", "display: none");
+				document.getElementById("loginButton").setAttribute("style", "display: block");
+				document.cookie = "expired";
+			}
+
+			function LoginOnload() {
+				if(document.cookie == "expired")
+				return false;
+				if(document.cookie == "")
+				return false;
+				else {
+				loginKeep();
+				}
+			}
+		</script>
+	</body>
+</html>

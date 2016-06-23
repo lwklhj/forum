@@ -1,3 +1,4 @@
+/* main page navigation */
 nav ul{
 	float: right;
 }
@@ -17,9 +18,11 @@ nav ul li a{
 *{
 	margin: 0;
 	padding: 0;
+	word-wrap: break-word;
 }
+
 a{
-	text-decoration: none;
+	
 	color: black;
 
 }
@@ -49,19 +52,15 @@ hr{
 	margin-top: 5px;
 	border-top: 1px dashed #8c8b8b;
 }
-li{
-	display: inline-block;
-}
 
+/* menu */
 .menu_wrapper{
 	text-align: center;
 
 }
 .menu_item:hover{
 	cursor: pointer;
-	color:red;
-	
-	
+	color:red;	
 }
 .menu_item{
 	display: inline-block;
@@ -73,18 +72,47 @@ li{
 	text-align: center;
 
 }
-.item_container ul{
-	text-align: center;
-	display: none;
-	
+/*  item box */
+table{
+	border-collapse: collapse;
+	width:90%;
+	margin:auto;
+	display:none;
 	
 }
-
-.item_container ul li{
-	margin: 10px;
-	width:305px;
-	height: 100px;
-	box-shadow: 1px 1px 2px 2px #777777;
+.courseIcon{
+	width: 170px;
+	height:170px;
+}
+td{
+	margin-top: 5px;
+	/*width: 400px;*/
+	width: 20%;
+	padding: 10px;
+	
+}
+td>a{
+	float: left;
+}
+dl{
+	
+	margin-left:32.5%;
+}
+dt{
+	font-weight: 700;
+}
+strong{
+	color:blue;
+}
+.academic_item{
+	height:390px;
+	border:1px solid blue;
+	overflow: auto;
+}
+.cca_item{
+	height:450px;
+	border:1px solid blue;
+	overflow: auto;
 }
 /*footer*/
 footer{

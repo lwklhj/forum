@@ -4,10 +4,13 @@ $(document).ready(function(){
 		$menuList=$(this).parents(".menu_wrapper").children("a");
 		$itemList=$(this).parents(".menu_container").siblings(".item_container").children("table");
 		index=$menuList.index(this);
+		$(this).css("background-color","#55EDE3");
+		$(this).siblings().css("background-color","#FFFFFF");
 		$itemList.eq(index).show(1000).siblings("table").hide();
 
 	});
 	$(".item_container table:first-child").show();
+	$(".menu_wrapper a:first-child").css("background-color","#55EDE3");
 
 	
 	

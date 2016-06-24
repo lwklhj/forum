@@ -64,7 +64,7 @@ body{
 }
 .menu_item:hover{
 	cursor: pointer;
-	color:red;	
+	background-color: #B4D3DE;	
 }
 .menu_item{
 	display: inline-block;
@@ -93,8 +93,8 @@ td{
 	margin-top: 5px;
 	/*width: 400px;*/
 	width: 20%;
-	padding: 10px;
 	
+	padding: 10px;
 	
 }
 td>a{

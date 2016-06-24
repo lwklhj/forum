@@ -13,6 +13,7 @@ nav ul li{
 }
 nav ul li a{
 	color:#FFFFFF;
+	text-decoration: none;
 
 }
 *{
@@ -35,6 +36,7 @@ section{
 	width: 98%;
 	margin-left: auto;
 	margin-right: auto;
+	background-color: #FFFFFF;
 	
 
 }
@@ -50,9 +52,11 @@ hr{
 }
 .hrDot{
 	margin-top: 5px;
-	border-top: 1px dashed #8c8b8b;
+	border-top: 1px solid #8c8b8b;
 }
-
+body{
+	background-color: #66BEED;
+}
 /* menu */
 .menu_wrapper{
 	text-align: center;
@@ -78,6 +82,7 @@ table{
 	width:90%;
 	margin:auto;
 	display:none;
+	empty-cells: show;
 	
 }
 .courseIcon{
@@ -89,6 +94,7 @@ td{
 	/*width: 400px;*/
 	width: 20%;
 	padding: 10px;
+	
 	
 }
 td>a{
@@ -106,12 +112,12 @@ strong{
 }
 .academic_item{
 	height:390px;
-	border:1px solid blue;
+	
 	overflow: auto;
 }
 .cca_item{
 	height:450px;
-	border:1px solid blue;
+	
 	overflow: auto;
 }
 /*footer*/

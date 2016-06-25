@@ -3,49 +3,61 @@
 <meta charset="UTF-8"> 
 	<head>
 		<title>NYP Forums</title>
-
-		<style>
-			* {margin: 0; padding: 0;}
-
-			#wrapper {position: relative; left:10%; top: 100px;}
-
-				#topbar {float: left; border: 1px solid black; width: 80%; margin-bottom: 10px;}
-
-				#search {float: left; margin: 5px;}
-
-				#search_icon {height: 1em;}
-
-				#post {float: right; margin: 5px;}
-
-				#mainsection {float: left; border: 1px solid black; width: 80%;}
-
-				#mainsection h3 {border: 1px solid black; margin: 5px; text-align: center; padding-top: 5px; padding-bottom: 5px;}
-
-				a {text-decoration: none; color: black; font-weight: bold;}
-
-				a:visited {color: purple;}
-
-				#Chatboxframe {position: fixed; bottom: 0; right: 0; z-index: 2000;}
-		</style>
+		<link rel="stylesheet" type="text/css" href="css/threadPage.css">
+		<link rel="stylesheet" type="text/css" href="css/footer.css">
+		<script type="text/javascript" src="js/threadPage.js"></script>
 		<div id="Chatboxframe">
 			<iframe src="ChatBox.html" width="700" height="700" frameBorder="0"></iframe>
 		</div>
 	</head>
 	<body>
-		<div id="wrapper">
-			<div id="topbar">
-				<!- Search ->
+		<header>
+			<nav>
+				<a href="index.html"><img src="img/logo/logo.jpg"></a>
+				<ul>
+					<li><a href="">SIT</a></li>
+					<li><a href="">SED</a></li>
+					<li><a href="">SDN</a></li>
+					<li><a href="">SBM</a></li>
+					<li><a href="">SHS</a></li>
+					<li><a href="">SCL</a></li>
+					<li><a href="">SIDM</a></li>
+					<li>CCA
+						<ul>
+							<li>Academic club</li>
+							<li>Arts and Culture</li>
+							<li>Community Service and Environment</li>
+							<li>Sports and Adventure</li>
+							<li>Leadership and Development</li>
+							<li>Mind Sports</li>
+							<li>Interest Group</li>
+						</ul>
+					</li>
+					<li>Others
+						<ul>
+							<li>Game</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<section>
+			<article id="topbar">
+				<!-- Search -->
 				<form method=“get” action="FormProcessor.html" id="search">
 					<input placeholder="Search" name="search_data" value="">
 					<input type="image" id="search_icon" src="img/search_icon.png" alt="Search"/>
 				</form>
-
-				<!- Post ->
-				<input type="button" id="post" onclick="location.href='test.html';" value="Post">
-			</div>
-
-			<div id="mainsection">
-				<!- Threads ->
+				<!-- Post -->
+				<p class="post">Post</p>	
+			</article>
+			<article id="mainsection">
+				<!-- Threads -->
+				<table>
+					<tbody>
+						
+					</tbody>
+				</table>
 				<h3><a href="">Announcement 1</a></h3>
 				<h3><a href="">Announcement 2</a></h3>
 				<h3><a href="">Thread 17</a></h3>
@@ -54,7 +66,7 @@
 				<h3><a href="">Thread 14</a></h3>
 				<h3><a href="">Thread 13</a></h3>
 				<h3><a href="">Thread 12</a></h3>
-				<h3><a href="">Thread 11</a></h3>
+   				<h3><a href="">Thread 11</a></h3>
 				<h3><a href="">Thread 10</a></h3>
 				<h3><a href="">Thread 9</a></h3>
 				<h3><a href="">Thread 8</a></h3>
@@ -65,10 +77,26 @@
 				<h3><a href="">Thread 3</a></h3>
 				<h3><a href="">Thread 2</a></h3>
 				<h3><a href="">Thread 1</a></h3>
-			</div>
-		</div>
+			
+				
+			</article>
+			
+		</section>
+		<section>
+			
+		</section>
 
-		<script>
-		</script>
+		<!-- footer -->
+		<footer>
+			<a href="http://www.nyp.edu.sg/others/copyright-and-disclaimer">Copyright and Disclaimer</a>
+			<strong>|</strong>
+			<a href="http://www.nyp.edu.sg/others/privacy-policy">Privacy Policy</a>
+			<strong>|</strong>
+			<a href="http://www.nyp.edu.sg/others/organisational-awards">Organizational Awards</a>
+			<hr>
+			<p>Nanyang Polytechnic 180 Ang Mo Kio Avenue 8 Singapore 569830 Tel:6451 5115<br>
+	       		Copyright© 2013 NYP, Singapore. All rights reserved.<br>
+	      		 Best viewed at 1024 x 768 resolution with Internet Explorer 8.</p>
+		</footer>
 	</body>
 </html>

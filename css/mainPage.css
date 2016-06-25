@@ -120,27 +120,6 @@ strong{
 	
 	overflow: auto;
 }
-/*footer*/
-footer{
-	background-color: #AABABF;
-	width:50%;
-	margin: auto;
-}
-footer a:hover{
-	color: #FFFFFF;
-}
-footer a{
-	display: inline-block;
-	font-size: 15px;
-	margin-right:15px;
-	margin-left: 15px;
-}
-footer hr{
-	margin:5px;
-}
-footer p{
-	margin-left: 15px;
-	font-size: 15px;
 
-}
+
 

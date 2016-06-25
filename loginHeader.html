@@ -1,43 +1,35 @@
 <!DOCTYPE HTML>
-<!- use document.cookie to get username ->
+<!-- use document.cookie to get username -->
 <html>
 	<head>
-		<style>
-			* {margin: 0; padding: 0;}
-
-			navv {position: absolute; top: 0; right 0;}
-
-			nav button {float: right; margin: 10px;}
-
-			nav p {float: right;}
-
-			hrr {border: 1px solid black;}
-
-			#loginBox {position: absolute; width: 250px; height: 120px; border: 1px solid black; top: 50%; right:50%}
-
-			#closeLoginbox {float: right;}
-
-		</style>
-
+		<link rel="stylesheet" type="text/css" href="css/loginPage.css">
 		<script>
 			window.onload = function() {LoginOnload();}
 		</script>
 	</head>
 	<body>
 		<nav>
-			<a href="#"><img src="img/logo/logo.jpg"></a>
-			<button type="button" id="loginButton" onclick="loginator()">Login</button>
-			<p id="loginWelcome"></p>
-			<button style="display: none;" id="loginLogout" onclick="logoutinator()" required>Log Out</button>
+			<a href="index.html"><img src="img/logo/logo.jpg"></a>
+			<ul>
+
+				<li id="loginWelcome" style="display: none;"<li>
+				<li><a href="http://www.nyp.edu.sg/">Main</a></li>
+				<li>Tool</li>
+
+				<li id="loginButton"><a href="#" onclick="loginator()">Login</a></li>
+
+				<li id="loginLogout" style="display: none;"><a href="#" onclick="logoutinator()" required>Log Out</a></li>
+
+			</ul>
 		</nav>
 
 		<form id="loginBox" style="display: none;" onsubmit="loginSubmit(); this.reset(); return false;">
 			<button id="closeLoginbox" onclick="loginXbox()">X</button>
 			Username:<br><input id="loginData" required><br>
-			Password:<br><input id="loginPW" type="password" required>
+			Password:<br><input id="loginPW" type="password"  required>
 			<button onclick="loginSubmit()" required>Submit</button>
 		</form>
-		<hr></hr>
+
 		<script>
 			var LoginName;
 			function loginator() {
@@ -56,10 +48,12 @@
 				else {
 					loginName = document.getElementById("loginData").value;
 					document.getElementById("loginWelcome").innerHTML = ("Welcome " + loginName);
+					document.getElementById("loginWelcome").setAttribute("style", "display: inline-block");
+
 					document.getElementById("loginButton").setAttribute("style", "display: none");
 					document.getElementById("loginBox").setAttribute("style", "display: none");
 
-					document.getElementById("loginLogout").setAttribute("style", "display: block");
+					document.getElementById("loginLogout").setAttribute("style", "display: inline-block");
 					document.cookie = loginName;
 				}
 			}
@@ -67,16 +61,19 @@
 			function loginKeep() {
 				loginName = document.cookie;
 				document.getElementById("loginWelcome").innerHTML = ("Welcome " + loginName);
+				document.getElementById("loginWelcome").setAttribute("style", "display: inline-block");
+
 				document.getElementById("loginBox").setAttribute("style", "display: none");
 				document.getElementById("loginButton").setAttribute("style", "display: none");
-				document.getElementById("loginLogout").setAttribute("style", "display: block");
+				document.getElementById("loginLogout").setAttribute("style", "display: inline-block");
 
 			}
 
 			function logoutinator() {
 				document.getElementById("loginWelcome").innerHTML = "";
 				document.getElementById("loginLogout").setAttribute("style", "display: none");
-				document.getElementById("loginButton").setAttribute("style", "display: block");
+				document.getElementById("loginButton").setAttribute("style", "display: inline-block");
+				document.getElementById("loginWelcome").setAttribute("style", "display: none");
 				document.cookie = "expired";
 			}
 

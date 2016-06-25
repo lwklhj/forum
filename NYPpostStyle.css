@@ -1,0 +1,17 @@
+table{
+	border: 1px solid black;
+    width: 70px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.admin {
+	text-align: right;
+}
+.addressBar{
+	display:inline;
+}
+.right{
+	display:inline;
+	float:right;
+	margin-left:20px;
+}

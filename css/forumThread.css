@@ -42,15 +42,41 @@ a:visited{
 }
 /* nav */
 nav ul{
+	margin-top:3px;
+	margin-right: 250px;
 	float:right;
 	display: inline-table;
+	
+	
+	
 }
 nav ul li{
+	border:#424445;
+	margin: 1px;
+	text-align: center;
+	width: 100px;
+	display: inline-block;
+	box-shadow: 2px  3px 5px #5C5E5E;
+	background-color: #108AB3;
+	padding: 15px;
+	
 	
 }
 nav ul li ul{
 	display: none;
+	position: absolute;
+	margin-top: 15px;
+	margin-left: -15px;
+	
+	
 }
-nav ul li:hover >ul{
+nav_hover:hover{
+	background-color: #92949C;
+}
+.nav_hover:hover >ul{
 	display: block;
+}
+nav ul li ul li{
+	display: block;
+	width:100px;
 }

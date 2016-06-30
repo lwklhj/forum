@@ -29,54 +29,39 @@ article{
 a{
 	text-decoration: none; 
 	color: black; 
-	font-weight: bold;
+	
 }
-a:visited{
-	color: purple;
-}
+
 #Chatboxframe {
 	position: fixed; 
 	bottom: 0; 
 	right: 0; 
 	z-index: 2000;
 }
-/* nav */
-nav ul{
-	margin-top:3px;
-	margin-right: 250px;
-	float:right;
-	display: inline-table;
-	
-	
-	
+table{
+	border-collapse: collapse;
+	width: 100%;
 }
-nav ul li{
-	border:#424445;
-	margin: 1px;
-	text-align: center;
-	width: 100px;
-	display: inline-block;
-	box-shadow: 2px  3px 5px #5C5E5E;
-	background-color: #108AB3;
-	padding: 15px;
-	
-	
+thead{
+	border-bottom: 1px solid #d1e0e0;
 }
-nav ul li ul{
-	display: none;
-	position: absolute;
-	margin-top: 15px;
-	margin-left: -15px;
-	
-	
+tr{
+	border-bottom: 1px solid #d1e0e0;
+
 }
-nav_hover:hover{
-	background-color: #92949C;
+thead tr{
+	background-color: #F2F2F2;
 }
-.nav_hover:hover >ul{
-	display: block;
+th,td{
+	height:50px;
+	font-family: Verdana;
 }
-nav ul li ul li{
-	display: block;
-	width:100px;
+
+.name{
+	width: 70%;
+
+	text-align: left;
+}
+.date,.by{
+	width: 15%;
 }

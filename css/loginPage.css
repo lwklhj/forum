@@ -1,10 +1,10 @@
 * {margin: 0; padding: 0;}
 
-nav ul{
+nav#LoginBar ul{
 	float: right;
 	white-space: nowrap;
 }
-nav ul li{
+nav#LoginBar ul li{
 	width:auto;
 	height:30px;
 	margin:10px;
@@ -14,7 +14,7 @@ nav ul li{
 	background-color: #406BA8;
 	color:#FFFFFF;
 }
-nav ul li a{
+nav#LoginBar ul li a{
 	color:#FFFFFF;
 	text-decoration: none;
 
@@ -26,9 +26,9 @@ li{
 
 navv {position: absolute; top: 0; right 0;}
 
-nav button {float: right; margin: 10px;}
+nav#LoginBar button {float: right; margin: 10px;}
 
-nav p {float: right;}
+nav#LoginBar p {float: right;}
 
 hrr {border: 1px solid black;}
 

@@ -4,6 +4,21 @@ padding: 0;
 font-size:100%;
 line-height:1;
 }
+body{
+	background-color: #66BEED
+}
+#content{
+	background-color: #ffffff;
+
+}
+a{
+	text-decoration: none; 
+	color: black; 	
+}
+li{
+	list-style-type: none;
+	display:inline;
+}
 h1{
 	text-align: center;
 	color:blue;
@@ -19,11 +34,12 @@ h1{
 	margin: auto;
 	outline:solid green 2px;
 	max-height:350px;
-	height:350px;
+	height:400px;
 	width:75%;
 
 }
 section{
+	margin-top:20px;
 	width: 95%;
 	margin-left: auto;
 	margin-right: auto;
@@ -39,6 +55,12 @@ div p{
 	padding-right: 10px;
 	padding-top: 10px;
 	padding-bottom:10px;
+}
+#content>p{
+	height:30px;
+}
+#content>p>a{
+	color: blue;
 }
 hr{
 	outline: solid black 1px;

@@ -8,6 +8,7 @@ header{
 }
 #navBar ul{
 	top:0px;
+	
 	display: inline-block;
 	background-color: #129690;
 
@@ -58,6 +59,9 @@ header{
 #navBar>ul>li>ul>li>ul>li{
 	padding: 15px;
 
+}
+#navBar>ul>li>ul>li>ul>li:hover{
+	background-color:  #13EDE2;
 }
 #row2{
 	z-index: 10;

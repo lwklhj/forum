@@ -1,3 +1,11 @@
+a{
+	text-decoration: none; 
+	color: black; 	
+}
+li{
+	list-style-type: none;
+	display:inline;
+}
 body{
 	background-color: #66BEED;
 }
@@ -11,6 +19,7 @@ form{
 section{
 	width: 97%;
 	margin: auto;
+	margin-top: 20px;
 }
 #title_box{
 	width:500px;

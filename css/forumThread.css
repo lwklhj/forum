@@ -65,3 +65,29 @@ th,td{
 .date,.by{
 	width: 15%;
 }
+#topbar{
+	height:50px;
+}
+#search{
+	float: left;
+}
+#search a img{
+	height:30px;
+	width: 30px;
+	border:1px solid black;
+}
+#searchbar{
+	height:20px;
+	width: 100px;
+}
+
+.post a{
+	padding:10px;
+	background-color: blue;
+	color:white;
+	float: right;
+}
+
+#wrapper{
+	margin-top: 10px;
+}

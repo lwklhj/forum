@@ -33,8 +33,7 @@ h1{
 .box{
 	margin: auto;
 	outline:solid green 2px;
-	max-height:350px;
-	height:400px;
+	height:500px;
 	width:75%;
 
 }
@@ -44,7 +43,7 @@ section{
 	margin-left: auto;
 	margin-right: auto;
 }
-.name{
+.namey{
 	text-decoration: underline
 }
 span>p{
@@ -83,14 +82,17 @@ p{
 }
 .commentComment{
 	width:80%;
-	
+	border-radius:25px;
 }
-.enterButton{
-	
+.replyButton{
+	width:10%;
 }
 .date{
 	float:right;
 }
-footer{
-	padding-top:20px;
+form{
+	padding:10px;
+}
+.replybutton{
+	padding:10px;
 }

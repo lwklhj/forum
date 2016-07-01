@@ -78,3 +78,6 @@ p{
 .sentence{
 	float: left;
 }
+#button{
+	float:right;
+}

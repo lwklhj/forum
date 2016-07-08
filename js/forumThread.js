@@ -6,11 +6,28 @@ var getQueryString=function(field,url){
 }
 
 var queryData=[getQueryString("type"),getQueryString("name")];
+
 $(document).ready(function(){
-	for(var i=0;i<20;i++){
-		var newRow="<tr><td class=\"name\"><a href=\"threadpage.html\">haha</a></td><td class=\"by\">bb</td><td class=\"date\">date</td></tr>";
-		$("#content").append(newRow);
-	}
+	$("title").text(queryData[1]+" forum");
+	$("#queryInfo").on("click",function(){
+		window.location.href = "postPage.html?type="+queryData[0]+"&name="+queryData[1];
+	})
+		//
+
+	
+	jQuery.ajax({
+		url:"data/"+queryData[0]+"/"+queryData[1]+".txt",
+		dataType:"text",
+		success:function(data){
+			var list=data.split("&");
+			for(var i=0;i<list.length;i++){
+				var splitData=list[i].split("|");
+				var newRow="<tr><td class=\"name\"><a href=\"threadpage.html?id="+splitData[0]+"\">"+splitData[0]+"</a></td><td class=\"by\">"+splitData[1]+"</td><td class=\"date\">"+splitData[2]+"</td></tr>";
+				
+				$("#content").append(newRow);
+			}
+		}
+	});
 
 });
 

@@ -4,6 +4,7 @@
 	<title>Thread</title>
 	<script type="text/javascript" src="js/nav.js"></script>
 	<script type="text/javascript" src="js/jquery-3.0.0.js"></script>
+	<script type="text/javascript" src="js/threadpage.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/nav.css">
 	<link rel= "stylesheet" type="text/css" href="css/threadstyle.css">
 	<link rel="stylesheet" type="text/css" href="css/footer.css">
@@ -42,7 +43,7 @@
 			</form>
 
 			<nav id="navBar">
-				<a href="index.html"><img src="img/logo/logo.jpg"></a>
+				<a href="index.html"><img style="height: 60px; margin: 5px;" src="img/logo/logo.png"></a>
 				<ul>
 					<li><a href="">SIT</a></li>
 					<li><a href="">SED</a></li>
@@ -204,7 +205,10 @@
 				<p>By: </p>
 				<p class="name">Crescens Tan</p>
 			</span>
-			<p class="sentence">No man's sky is going to be a great game. It has a open world concept and the graphics is just beautiful. I am so excited for this upcoming game! too bad I have to wait for another 2 years... haiz, what do you guys think about this game? I'm interested to see your opinion. </p>
+			<p class="sentence">No man's sky is going to be a great game. It has a open world concept and the graphics is just beautiful. I am so excited for this upcoming game! too bad I have to wait for another 2 years.Whether a distant mountain or a planet hanging low on the horizon, you can go there. You can fly seamlessly from the surface of a planet to another, and every star in the sky is a sun that you can visit.
+			Where you’ll go and how fast you’ll make your way through this universe is up to you. It’s yours for the taking.Explore uncharted solar systems and catalogue unique new forms of life. Every planet’s landscape is different from the next, and populated by species never before encountered.
+			Find ancient artefacts that could reveal the secrets behind the universe.
+			Choose whether to share your discoveries with other players. They’re exploring the same vast universe in parallel; perhaps you’ll make your mark on their worlds as well as your own. This is as much I know about No Man's Sky, I would like to know about your opinions on this upcoming game.</p>
 			<img src="img/noManSky.jpeg" style="width:304px;height:228px;">
 		</div>
 		<h1 id="comments">Comments</h1>
@@ -221,7 +225,9 @@
 							<form class="comments">
 								<input class="commentComment" type="text" placeholder="comments">
 							</form>	
-							<button class="enterButton">enter</button>
+							<span class="replybutton">	
+							<button  class="replyButton">reply</button>
+							</span>
 					<hr>
 				<!--comment 2-->
 					<span class="NameBox">
@@ -233,8 +239,10 @@
 						<!--comment box-->
 							<form class="comments">
 								<input class="commentComment" type="text" placeholder="comments">
-							</form>	
-							<button  class="enterButton">enter</button>
+							</form>
+							<span class="replybutton">	
+							<button  class="replyButton">reply</button>
+							</span>
 					<hr>
 				<!--comment 3-->
 					<span class="NameBox">
@@ -247,11 +255,13 @@
 							<form class="comments">
 								<input class="commentComment" type="text" placeholder="comments">
 							</form>	
-							<button class="enterButton">enter</button>
+							<span class="replybutton">	
+							<button  class="replyButton">reply</button>
+							</span>
 					<hr>
 					<button id="button">Comment</button>
 		</div>
-	</section>
+	
 		</section>
 		<!-- footer -->
 		<footer>

@@ -1,5 +1,5 @@
 /* main page navigation */
-nav ul{
+/*nav ul{
 	float: right;
 }
 nav ul li{
@@ -15,7 +15,7 @@ nav ul li a{
 	color:#FFFFFF;
 	text-decoration: none;
 
-}
+}*/
 *{
 	margin: 0;
 	padding: 0;
@@ -62,9 +62,12 @@ body{
 	text-align: center;
 
 }
+.menu_item{
+	background-color: #129690;
+}
 .menu_item:hover{
 	cursor: pointer;
-	background-color: #B4D3DE;	
+	background-color:  #13EDE2;
 }
 .menu_item{
 	display: inline-block;

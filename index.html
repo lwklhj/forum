@@ -49,17 +49,39 @@
 	<link rel="stylesheet" type="text/css" href="css/footer.css">
 	<script type="text/javascript" src="js/jquery-3.0.0.js"></script>
 	<script type="text/javascript" src="js/mainPage.js"></script>
+	<!-- Chat function -->
+	<script type="text/javascript" src="js/ChatFunction.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/ChatBox.css">
+	<!-- Login function -->
+	<script type="text/javascript" src="js/LoginFunction.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/loginPage.css">
+	<script>
+		window.onload = function() {StartupChecker();}
+	</script>
 </head>
 <body>
-	<nav>
-		<a href="#"><img src="img/logo/logo.jpg"></a>
-		<ul>
-			<li><a href="http://www.nyp.edu.sg/">Main</a></li>
-			<li>Tool</li>
-			<li>Login</li>
-			
-		</ul>
-	</nav>
+	<header>
+		<a href="index.html"><img style="height: 60px; margin: 5px;" src="img/logo/logo.png"></a>
+		<nav id="LoginBar">
+			<ul>
+				<li id="WelcomeUserName"></li>
+				<li><a href="http://www.nyp.edu.sg/">Main</a></li>
+				<li>Tool</li>
+				<li id="LoginButton"><a href="#" onclick="WhenLoginPress()">Login</a></li>
+				<li id="LogoutButton"><a href="#" onclick="WhenLogoutPress()">Log Out</a></li>
+			</ul>
+		</nav>
+
+		<div id="LoginBox">
+			<form onsubmit="LoginSubmit(); this.reset(); return false;">
+				<button id="CloseLBButton" onclick="CloseLoginbox()">X</button>
+				Username:<br><input id="loginName" maxlength="9" required><br>
+				Password:<br><input id="loginPW" type="password"  required>
+				<button onclick="LoginSubmit()" required>Submit</button>
+			</form>
+		</div>
+	</header>
+
 	<!-- For banner-->
 	<section>
 		
@@ -1784,10 +1806,12 @@
 		<a href="http://www.nyp.edu.sg/others/privacy-policy">Privacy Policy</a>
 		<strong>|</strong>
 		<a href="http://www.nyp.edu.sg/others/organisational-awards">Organizational Awards</a>
+		<strong>|</strong>
+		<a href="Contact Page.html">Contact Us</a>
 		<hr>
 		<p>Nanyang Polytechnic 180 Ang Mo Kio Avenue 8 Singapore 569830 Tel:6451 5115<br>
-       		Copyright© 2013 NYP, Singapore. All rights reserved.<br>
-      		 Best viewed at 1024 x 768 resolution with Internet Explorer 8.</p>
+       		Copyright© 2016 NYP, Singapore. All rights reserved.<br>
+      		 Best viewed at 1920 x 1080 resolution with Firefox.</p>
 	</footer>
 </body>
 </html>

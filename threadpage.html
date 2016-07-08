@@ -271,37 +271,45 @@
 			<a href="http://www.nyp.edu.sg/others/privacy-policy">Privacy Policy</a>
 			<strong>|</strong>
 			<a href="http://www.nyp.edu.sg/others/organisational-awards">Organizational Awards</a>
+			<strong>|</strong>
+			<a href="Contact Page.html">Contact Us</a>
 			<hr>
 			<p>Nanyang Polytechnic 180 Ang Mo Kio Avenue 8 Singapore 569830 Tel:6451 5115<br>
 	       		Copyright© 2013 NYP, Singapore. All rights reserved.<br>
-	      		 Best viewed at 1024 x 768 resolution with Internet Explorer 8.</p>
+	      		 Best viewed at 1920 x 1080 resolution with Firefox.</p>
 		</footer>
 		<!-- Chat -->
-		<div id="ChatBoxWrapper" style="display: none;">
-			<div id="ChatCommentView">
-				<span class="name">Hendry</span>
-				<span>22/7/2016 16:55</span>
-				<p>Hello!</p>
-				<span class="name">Caroline</span>
-				<span>22/7/2016 16:55</span>
-				<p>Hi!</p>
-				<div id="ChatBoxBottomLine" style="visibility: hidden;"></div>
+		<a onclick="CBToggler()" href="#"><img id="CBToggler" src="img/Chatbox.png"></a>
+		
+		<div id="CBWrapper" style="display: none;">
+			<div id="CBComments">
+				<div class="CBTextBG">
+					<span class="CBNames">Hendry</span>
+					<span>22/7/2016 16:55</span>
+					<p>Hello!</p>
+				</div>
+				<div class="CBTextBG">				
+					<span class="CBNames">Caroline</span>
+					<span>22/7/2016 16:55</span>
+					<p>Hi!</p>
+				</div>
+				<div id="CBHidden" style="visibility: hidden;"></div>
+			</div>
+			
+			<p class="CBNameHeader">Online<p>
+			<div id="CBUsers">
+				<p class="CBNames">Hendry</p>
+				<p class="CBNames">Caroline</p>
+			</div>
+			
+			<div id="CBChatField">
+				<form onsubmit="this.reset(); return false">
+					<label style="display: none;">Message:</label><input id="CBCommentData" required></input>
+					<button onclick="CBCommentSend()">Send</button>
+				</form>
 			</div>
 		
-			<form id="ChatEnterField" onsubmit="this.reset(); return false">
-				<input id="ChatCommentData" onkeypress="" placeholder="Type your text here" required>
-				<button onclick="ChatCommentEnter()" required style="visibility: hidden;">Send</button>
-			</form>
-		
-			<div id="ChatLoginedUsers">
-				<p class="name">Hendry</p>
-				<p class="name">Caroline</p>
-				<p class="name">Maverick</p>
-			</div>
-			<div id="ChatBoxIcon-Background"></div>
-		</div>
-		<div id="ChatBoxButton" style="display: none;">
-			<input type="image" src="img/chatbox.png" border="1px solid black" id="ChatBoxIcon" onClick="ChatBoxCounter()"/>
+			<div id="CBTogglerBG"></div>
 		</div>
 	</section>
 </body>

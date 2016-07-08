@@ -61,7 +61,6 @@
 </head>
 <body>
 	<header>
-		<a href="index.html"><img style="height: 60px; margin: 5px;" src="img/logo/logo.png"></a>
 		<nav id="LoginBar">
 			<ul>
 				<li id="WelcomeUserName"></li>
@@ -81,7 +80,12 @@
 			</form>
 		</div>
 	</header>
-
+		
+		<nav id="navBar">
+			<a href="index.html"><img style="height: 60px; margin: 5px;" src="img/logo/logo.png"></a>
+		</nav>
+	</header>
+	
 	<!-- For banner-->
 	<section>
 		
@@ -1813,5 +1817,39 @@
        		Copyright© 2016 NYP, Singapore. All rights reserved.<br>
       		 Best viewed at 1920 x 1080 resolution with Firefox.</p>
 	</footer>
+	
+	<!-- Chat -->
+	<a onclick="CBToggler()" href="#"><img id="CBToggler" src="img/Chatbox.png"></a>
+		
+	<div id="CBWrapper" style="display: none;">
+		<div id="CBComments">
+			<div class="CBTextBG">
+				<span class="CBNames">Hendry</span>
+				<span>22/7/2016 16:55</span>
+				<p>Hello!</p>
+			</div>
+			<div class="CBTextBG">				
+				<span class="CBNames">Caroline</span>
+				<span>22/7/2016 16:55</span>
+				<p>Hi!</p>
+			</div>
+			<div id="CBHidden" style="visibility: hidden;"></div>
+		</div>
+			
+		<p class="CBNameHeader">Online<p>
+		<div id="CBUsers">
+			<p class="CBNames">Hendry</p>
+			<p class="CBNames">Caroline</p>
+		</div>
+			
+		<div id="CBChatField">
+			<form onsubmit="this.reset(); return false">
+				<label style="display: none;">Message:</label><input id="CBCommentData" required></input>
+				<button onclick="CBCommentSend()">Send</button>
+			</form>
+		</div>
+		
+		<div id="CBTogglerBG"></div>
+	</div>
 </body>
 </html>

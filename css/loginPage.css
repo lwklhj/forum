@@ -28,6 +28,6 @@ nav#LoginBar button {float: right; margin: 10px;}
 
 nav#LoginBar p {float: right;}
 
-#LoginBox {position: fixed; background-color: #F4F4F4; width: 250px; height: 120px; border: 1px solid black; top: 50%; right:50%}
+#LoginBox {position: fixed; background-color: #F4F4F4; width: 250px; height: 120px; border: 1px solid black; top: 50%; right:50%; z-index: 10005;}
 
 #CloseLBButton {float: right;}

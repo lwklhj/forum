@@ -1,3 +1,14 @@
+var getQueryString=function(field,url){
+    var href=url ? url:window.location.href;
+    var reg=new RegExp("[?&]"+field+ "=([^&#]*)","i");
+    var string=reg.exec(href);
+    return string ? string[1]:null;
+}
+
+var queryData=[getQueryString("type"),getQueryString("name")];
+function redirect(){
+    window.location.href = "ForumsThreads.html?type="+queryData[0]+"&name="+queryData[1];
+}
 $(document).ready(function()
 {
     var wordCounts = {};

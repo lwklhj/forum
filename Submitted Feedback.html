@@ -1,12 +1,11 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
-<meta charset="UTF-8"> 
 	<head>
-		<title>NYP Forums</title>
-		<script type="text/javascript" src="js/jquery-3.0.0.js"></script>
-		<link rel="stylesheet" type="text/css" href="css/forumThread.css">
+		<title>Thank You</title>
+		<link rel="stylesheet" type="text/css" href="Global.css">
+		<link rel="stylesheet" type="text/css" href="css/Contact Page.css">
+		
 		<link rel="stylesheet" type="text/css" href="css/footer.css">
-		<script type="text/javascript" src="js/forumThread.js"></script>
 		<script type="text/javascript" src="js/nav.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/nav.css">
 		<!-- Chat function -->
@@ -33,11 +32,11 @@
 			
 			<div id="LoginBox">
 				<form onsubmit="LoginSubmit(); this.reset(); return false;">
-					<button id="CloseLBButton" onclick="CloseLoginbox()">X</button>
-					Username:<br><input id="loginName" maxlength="9" required><br>
+					Username:<br><input id="loginName" required><br>
 					Password:<br><input id="loginPW" type="password"  required>
 					<button onclick="LoginSubmit()" required>Submit</button>
 				</form>
+				<button id="CloseLBButton" onclick="CloseLoginbox()">X</button>
 			</div>
 
 			<nav id="navBar">
@@ -188,38 +187,9 @@
 				</ul>
 			</nav>
 		</header>
-		<section id="wrapper">
-			<article id="topbar">
-				<!-- Search -->
-				<form method=“get” action="FormProcessor.html" id="search">
-					<input placeholder="Search" name="search_data" value="" id=searchbar>
-					<input type="image" src="img/Search_icon.png" name="search" width="30" height="30">
-					
-				</form>
-				<!-- Post -->
-				<p class="post"><a href="postPage.html">Post</a></p>	
-			</article>
-			<article id="mainsection">
-				<!-- Threads -->
-				<table>
-					<thead>
-						<tr>
-							<th class="thread">Title</th>
-							<th class="by">By</th>
-							<th class="date">Date</th>
-						</tr>
-					</thead>
-					<tbody id="content">
-						
-					</tbody>
-				</table>
-			</article>
-			
-		</section>
-		<section>
-			
-		</section>
-
+		
+		<p id="ContactBox" style="text-align: center;">Your feedback has been subitted!</p>
+		
 		<!-- footer -->
 		<footer>
 			<a href="http://www.nyp.edu.sg/others/copyright-and-disclaimer">Copyright and Disclaimer</a>
@@ -251,15 +221,15 @@
 				<div id="CBHidden" style="visibility: hidden;"></div>
 			</div>
 			
-			<p class="CBNameHeader">Online<p>
 			<div id="CBUsers">
+				<p class="CBNameHeader">Online<p>
 				<p class="CBNames">Hendry</p>
 				<p class="CBNames">Caroline</p>
 			</div>
 			
 			<div id="CBChatField">
 				<form onsubmit="this.reset(); return false">
-					<label style="display: none;">Message:</label><input id="CBCommentData" required></input>
+					<label>Message:</label><input id="CBCommentData" required></input>
 					<button onclick="CBCommentSend()">Send</button>
 				</form>
 			</div>
@@ -267,4 +237,5 @@
 			<div id="CBTogglerBG"></div>
 		</div>
 	</body>
+
 </html>

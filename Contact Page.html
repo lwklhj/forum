@@ -1,12 +1,11 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
-<meta charset="UTF-8"> 
 	<head>
-		<title>NYP Forums</title>
-		<script type="text/javascript" src="js/jquery-3.0.0.js"></script>
-		<link rel="stylesheet" type="text/css" href="css/forumThread.css">
+		<title>Contact Us</title>
+		<link rel="stylesheet" type="text/css" href="Global.css">
+		<link rel="stylesheet" type="text/css" href="css/Contact Page.css">
+		
 		<link rel="stylesheet" type="text/css" href="css/footer.css">
-		<script type="text/javascript" src="js/forumThread.js"></script>
 		<script type="text/javascript" src="js/nav.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/nav.css">
 		<!-- Chat function -->
@@ -17,6 +16,37 @@
 		<link rel="stylesheet" type="text/css" href="css/loginPage.css">
 		<script>
 			window.onload = function() {StartupChecker();}
+		</script>
+		
+		<script>
+		function ContactableChange(){
+		var telchange = document.getElementById("Contactable").value;
+		if(telchange == "JA") {
+			document.getElementById("JIANAN").style.display="block";
+			document.getElementById("CRESCENSTAN").style.display="none";
+			document.getElementById("HEFEI").style.display="none";
+			document.getElementById("WOONKIT").style.display="none";
+		}
+		else if(telchange == "CT") {
+			document.getElementById("JIANAN").style.display="none";
+			document.getElementById("CRESCENSTAN").style.display="block";
+			document.getElementById("HEFEI").style.display="none";
+			document.getElementById("WOONKIT").style.display="none";	
+		}
+		else if(telchange == "HF") {
+			document.getElementById("JIANAN").style.display="none";
+			document.getElementById("CRESCENSTAN").style.display="none";
+			document.getElementById("HEFEI").style.display="block";
+			document.getElementById("WOONKIT").style.display="none";
+		}
+		else if(telchange == "WK")	{	
+			document.getElementById("JIANAN").style.display="none";
+			document.getElementById("CRESCENSTAN").style.display="none";
+			document.getElementById("HEFEI").style.display="none";
+			document.getElementById("WOONKIT").style.display="block";
+		}
+		}
+		
 		</script>
 	</head>
 	<body>
@@ -33,11 +63,11 @@
 			
 			<div id="LoginBox">
 				<form onsubmit="LoginSubmit(); this.reset(); return false;">
-					<button id="CloseLBButton" onclick="CloseLoginbox()">X</button>
-					Username:<br><input id="loginName" maxlength="9" required><br>
+					Username:<br><input id="loginName" required><br>
 					Password:<br><input id="loginPW" type="password"  required>
 					<button onclick="LoginSubmit()" required>Submit</button>
 				</form>
+				<button id="CloseLBButton" onclick="CloseLoginbox()">X</button>
 			</div>
 
 			<nav id="navBar">
@@ -188,38 +218,30 @@
 				</ul>
 			</nav>
 		</header>
-		<section id="wrapper">
-			<article id="topbar">
-				<!-- Search -->
-				<form method=“get” action="FormProcessor.html" id="search">
-					<input placeholder="Search" name="search_data" value="" id=searchbar>
-					<input type="image" src="img/Search_icon.png" name="search" width="30" height="30">
-					
-				</form>
-				<!-- Post -->
-				<p class="post"><a href="postPage.html">Post</a></p>	
-			</article>
-			<article id="mainsection">
-				<!-- Threads -->
-				<table>
-					<thead>
-						<tr>
-							<th class="thread">Title</th>
-							<th class="by">By</th>
-							<th class="date">Date</th>
-						</tr>
-					</thead>
-					<tbody id="content">
-						
-					</tbody>
-				</table>
-			</article>
-			
-		</section>
-		<section>
-			
-		</section>
-
+		<div id="ContactBox">
+			<h1>Contact Us</h1>
+			<form>
+				Your name (Optional)<br>
+				<input></input><br>
+				Your message<br>
+				<textarea cols="40" rows="10"></textarea><br>
+				<input type="button" value="Submit" onclick="location.href='Submitted Feedback.html'"/>
+				<p>Or give the web developers a call</p>
+				
+				<select id="Contactable" onchange="ContactableChange()">
+					<option disabled selected value">---</option>
+					<option value="JA">Jian An</option>
+					<option value="CT">Crescens Tan</option>
+					<option value="HF">He Fei</option>
+					<option value="WK">Woon Kit</option>
+				</select>
+				<p id="JIANAN" style="display: none;">Tel No.: +65 7526 9182</p>
+				<p id="CRESCENSTAN" style="display: none;">Tel No.: +65 5126 7182</p>
+				<p id="HEFEI" style="display: none;">Tel No.: +65 2719 9182</p>
+				<p id="WOONKIT" style="display: none;">Tel No.: +65 0162 6172</p>
+			</form>
+		</div>
+		
 		<!-- footer -->
 		<footer>
 			<a href="http://www.nyp.edu.sg/others/copyright-and-disclaimer">Copyright and Disclaimer</a>
@@ -251,15 +273,15 @@
 				<div id="CBHidden" style="visibility: hidden;"></div>
 			</div>
 			
-			<p class="CBNameHeader">Online<p>
 			<div id="CBUsers">
+				<p class="CBNameHeader">Online<p>
 				<p class="CBNames">Hendry</p>
 				<p class="CBNames">Caroline</p>
 			</div>
 			
 			<div id="CBChatField">
 				<form onsubmit="this.reset(); return false">
-					<label style="display: none;">Message:</label><input id="CBCommentData" required></input>
+					<label>Message:</label><input id="CBCommentData" required></input>
 					<button onclick="CBCommentSend()">Send</button>
 				</form>
 			</div>

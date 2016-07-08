@@ -1,40 +1,42 @@
-var count = 0;
-function ChatBoxCounter() {
-	if (localStorage.getItem("Name") == null)
-		document.getElementById("ChatBoxButton").style.display = 'none';
-	else {
-		count=count+1;	
-		if (count%2 == 0)
-			document.getElementById("ChatBoxWrapper").style.display = 'none';
-		else
-			document.getElementById("ChatBoxWrapper").style.display = 'block';
-	}
+var onCount = 0;
+function CBToggler(){
+	onCount++;
+	if(onCount%2 == 0)
+		document.getElementById("CBWrapper").style.display = "none";
+	else
+		document.getElementById("CBWrapper").style.display = "block";
 }
 
-function ChatCommentEnter() {
-	var CurrentLoginName = document.createElement("span");
-	CurrentLoginName.setAttribute("class", "name");
-	CurrentLoginName.innerHTML= localStorage.getItem('Name');
+function CBCommentSend() {
+	var newName = document.createElement("span");
+	newName.setAttribute("class", "CBNames");
+	newName.innerHTML= localStorage.getItem('Name');
 	
 	var CurrentDate = new Date();
-	var	mins = CurrentDate.getMinutes();
+	var	Minutes = CurrentDate.getMinutes();
+	if(Minutes<10)
+		Minutes = "0" + Minutes;
 	var Hours = CurrentDate.getHours();
 	var Day = CurrentDate.getDate();
 	var Month = CurrentDate.getMonth();
 	Month+1;
 	var Year = CurrentDate.getFullYear();
-	CurrentDate = " " + Day +"/" + Month + "/" + Year + " " + Hours + ":" + mins;
+	CurrentDate = " " + Day +"/" + Month + "/" + Year + " " + Hours + ":" + Minutes;
 	var NewDate = document.createElement("span");
 	NewDate.innerHTML = CurrentDate;
 	
-	var NewComment = document.createElement("div");
-	var NewCommentString = document.getElementById("ChatCommentData").value;
-	var BottomBarUp = document.getElementById("ChatBoxBottomLine");
+	CommentData = document.getElementById("CBCommentData").value;
+	var NewComment = document.createElement("p");
+	NewComment.innerHTML= CommentData;
 	
-	NewComment.innerHTML= NewCommentString;
+	var CBCommentDiv = document.createElement("div");
+	CBCommentDiv.setAttribute("class", "CBTextBG");
+	CBCommentDiv.appendChild(newName);
+	CBCommentDiv.appendChild(NewDate);
+	CBCommentDiv.appendChild(NewComment);
 	
-	BottomBarUp.parentNode.insertBefore(CurrentLoginName,BottomBarUp);
-	BottomBarUp.parentNode.insertBefore(NewDate,BottomBarUp);
-	BottomBarUp.parentNode.insertBefore(NewComment,BottomBarUp);
-	document.getElementById("ChatBoxBottomLine").scrollIntoView();
+	var CommentAbove = document.getElementById("CBHidden");
+	
+	CommentAbove.parentNode.insertBefore(CBCommentDiv,CommentAbove);
+	document.getElementById( 'CBHidden' ).scrollIntoView();
 }

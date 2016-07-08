@@ -1,60 +1,45 @@
-			var LoginName;
-			function loginator() {
-				document.getElementById("loginBox").setAttribute("style", "display: block");
-			}
+function StartupChecker(){
+	if(localStorage.getItem("Name") == null){
+		document.getElementById("LoginButton").style.display = "block";
+		document.getElementById("LoginButton").setAttribute("style", "display: inline-block");
+		
+		document.getElementById("WelcomeUserName").style.display = "none";
+		document.getElementById("LogoutButton").style.display = "none";
+		document.getElementById("LoginBox").style.display = "none";
+		document.getElementById("CBToggler").style.display = "none";
+		document.getElementById("CBWrapper").style.display = "none";
+	}
+	
+	else{
+		document.getElementById("LogoutButton").style.display = "block";
+		document.getElementById("LogoutButton").setAttribute("style", "display: inline-block");
+		
+		document.getElementById("WelcomeUserName").style.display = "block";
+		document.getElementById("WelcomeUserName").setAttribute("style", "display: inline-block");
+		
+		document.getElementById("WelcomeUserName").innerHTML = "Welcome " + "\"" + localStorage.getItem("Name") + "\"";
+		document.getElementById("LoginBox").style.display = "none";
+		document.getElementById("LoginButton").style.display = "none";
+		
+		document.getElementById("CBToggler").style.display = "block";
+	}
+}
 
-			function loginXbox() {
-				document.getElementById("loginBox").setAttribute("style", "display: none");
-			}
+function WhenLoginPress(){
+	document.getElementById("LoginBox").style.display = "block";
+	document.getElementById("LoginBox").setAttribute("style", "display: inline-block");
+}
 
-			function loginSubmit() {
-				if(document.getElementById("loginData").value == "")
-				return false;
-				if(document.getElementById("loginPW").value == "")
-				return false;
-				else {
-					loginName = document.getElementById("loginData").value;
-					document.getElementById("loginWelcome").innerHTML = ("Welcome " + "\"" + loginName + "\"");
-					document.getElementById("loginWelcome").setAttribute("style", "display: inline-block");
+function WhenLogoutPress(){
+	localStorage.clear();
+	StartupChecker();
+}
 
-					document.getElementById("loginButton").setAttribute("style", "display: none");
-					document.getElementById("loginBox").setAttribute("style", "display: none");
+function LoginSubmit(){
+	localStorage.setItem("Name", document.getElementById("loginName").value);
+	StartupChecker();
+}
 
-					document.getElementById("loginLogout").setAttribute("style", "display: inline-block");
-					localStorage.setItem("Name", loginName);
-					
-					document.getElementById("ChatBoxButton").style.display = 'block';
-				}
-			}
-
-			function loginKeep() {
-				loginName = localStorage.getItem('Name');
-				document.getElementById("loginWelcome").innerHTML = ("Welcome " + "\"" + loginName + "\"");
-				document.getElementById("loginWelcome").setAttribute("style", "display: inline-block");
-
-				document.getElementById("loginBox").setAttribute("style", "display: none");
-				document.getElementById("loginButton").setAttribute("style", "display: none");
-				document.getElementById("loginLogout").setAttribute("style", "display: inline-block");
-				
-				document.getElementById("ChatBoxButton").style.display = 'block';
-				document.getElementById("ChatBoxWrapper").style.display = 'none';
-			}
-
-			function logoutinator() {
-				document.getElementById("loginWelcome").innerHTML = "";
-				document.getElementById("loginLogout").setAttribute("style", "display: none");
-				document.getElementById("loginButton").setAttribute("style", "display: inline-block");
-				document.getElementById("loginWelcome").setAttribute("style", "display: none");
-				localStorage.clear();
-				
-				document.getElementById("ChatBoxButton").style.display = 'none';
-				document.getElementById("ChatBoxWrapper").style.display = 'none';
-			}
-
-			function LoginOnload() {
-				if(localStorage.getItem('Name') == null)
-					return false;
-				else {
-					loginKeep();
-				}
-			}
+function CloseLoginbox(){
+	document.getElementById("LoginBox").style.display = "none";
+}

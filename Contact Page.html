@@ -19,34 +19,14 @@
 		
 		<script>
 		function ContactableChange(){
-		var telchange = document.getElementById("Contactable").value;
-		if(telchange == "JA") {
-			document.getElementById("JIANAN").style.display="block";
-			document.getElementById("CRESCENSTAN").style.display="none";
-			document.getElementById("HEFEI").style.display="none";
-			document.getElementById("WOONKIT").style.display="none";
+			var i = document.getElementById("SelectedContact").value;
+			console.log(i);
+			var telcontact = ["Tel No.: +65 7526 9182", "Tel No.: +65 5126 7182", "Tel No.: +65 2719 9182", "Tel No.: +65 0162 6172"];
+			document.getElementById("TelInjector").innerHTML = telcontact[i];
 		}
-		else if(telchange == "CT") {
-			document.getElementById("JIANAN").style.display="none";
-			document.getElementById("CRESCENSTAN").style.display="block";
-			document.getElementById("HEFEI").style.display="none";
-			document.getElementById("WOONKIT").style.display="none";	
-		}
-		else if(telchange == "HF") {
-			document.getElementById("JIANAN").style.display="none";
-			document.getElementById("CRESCENSTAN").style.display="none";
-			document.getElementById("HEFEI").style.display="block";
-			document.getElementById("WOONKIT").style.display="none";
-		}
-		else if(telchange == "WK")	{	
-			document.getElementById("JIANAN").style.display="none";
-			document.getElementById("CRESCENSTAN").style.display="none";
-			document.getElementById("HEFEI").style.display="none";
-			document.getElementById("WOONKIT").style.display="block";
-		}
-		}
-		
 		</script>
+		<style>
+		</style>
 	</head>
 	<body>
 		<header>
@@ -217,29 +197,49 @@
 				</ul>
 			</nav>
 		</header>
-		<div id="ContactBox">
-			<h1>Contact Us</h1>
+		
+		
+		
+		
+		
+		
+
+		<div style="position: relative; width: 98%; height: 750px; background-color: white; margin-left: auto; margin-right: auto; margin-top: 10px;">
+			<h1 style="text-align: center;">Contact Us</h1>
+			<form action="Submitted Feedback.html">
+				<fieldset style="float: left; border: #67c1f5 1px solid; padding: 10px; margin: 10px; width: 440px; border-radius: 3px;">
+					<legend>By Message</legend>
+					<label>Your Name</label><input required style="border: #67c1f5 1px solid; padding: 10px; width: 440px; border-radius: 3px; margin: 10px;"></input><br>
+					<label>Your Email</label><input type="email" required style="border: #67c1f5 1px solid; padding: 10px; width: 440px; border-radius: 3px; margin: 10px;"></input><br>
+					<label>Your Tel No.</label><input type="tel" pattern="\d{8}" title="8 digit telephone number" required style="border: #67c1f5 1px solid; padding: 10px; width: 440px; border-radius: 3px; margin: 10px;"></input><br>
+					<label>Nature of Message</label><select style="border: #67c1f5 1px solid; padding: 10px; width: 440px; border-radius: 3px; margin: 10px;">
+						<option>Design of website</option>
+						<option>Bugs/Problem of website</option>
+						<option>Feature request</option>
+						<option>Others</option>
+					</select>
+					<label>Your Message</label><textarea required style="border: #67c1f5 1px solid; padding: 10px; width: 440px; height: 200px; border-radius: 3px; margin: 10px;"></textarea>
+					<input type="submit" value="Submit" style="border: #67c1f5 1px solid; padding: 10px; border-radius: 3px; margin: 10px;"/>
+				</fieldset>
+			</form>
 			<form>
-				Your name (Optional)<br>
-				<input></input><br>
-				Your message<br>
-				<textarea cols="40" rows="10"></textarea><br>
-				<input type="button" value="Submit" onclick="location.href='Submitted Feedback.html'"/>
-				<p>Or give the web developers a call</p>
-				
-				<select id="Contactable" onchange="ContactableChange()">
-					<option disabled selected value">---</option>
-					<option value="JA">Jian An</option>
-					<option value="CT">Crescens Tan</option>
-					<option value="HF">He Fei</option>
-					<option value="WK">Woon Kit</option>
-				</select>
-				<p id="JIANAN" style="display: none;">Tel No.: +65 7526 9182</p>
-				<p id="CRESCENSTAN" style="display: none;">Tel No.: +65 5126 7182</p>
-				<p id="HEFEI" style="display: none;">Tel No.: +65 2719 9182</p>
-				<p id="WOONKIT" style="display: none;">Tel No.: +65 0162 6172</p>
+				<fieldset style="float: left; border: #67c1f5 1px solid; padding: 10px; margin: 10px; width: 440px; border-radius: 3px;">
+					<legend>By phone</legend>
+					<label>Contact developers through telephone number</label><select id="SelectedContact" onchange="ContactableChange()" style="border: #67c1f5 1px solid; padding: 10px; width: 440px; border-radius: 3px; margin: 10px;">
+						<option value="0">Jian An</option>
+						<option value="1">Crescens Tan</option>
+						<option value="2">He Fei</option>
+						<option value="3">Woon Kit</option>
+					</select>
+					<span id="TelInjector"></span>
+				</fieldset>
 			</form>
 		</div>
+		
+		
+		
+		
+		
 		
 		<!-- footer -->
 		<footer>

@@ -81,13 +81,23 @@ th,td{
 	width: 100px;
 }
 
-.post a{
+.post{
 	padding:10px;
 	background-color: blue;
 	color:white;
 	float: right;
 }
+.post:hover{
+	cursor: pointer;
+}
 
 #wrapper{
 	margin-top: 10px;
+}
+#guide{
+	width:20%;
+	margin:auto;
+	border-bottom:black 2px solid;
+	border-left:black 2px solid;
+	border-right:black 2px solid;
 }

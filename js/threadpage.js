@@ -8,7 +8,7 @@ var getQueryString=function(field,url){
 var queryData=[getQueryString("id"),getQueryString("name")];
 $(document).ready(function(){
 		var title=document.getElementById("thread");
-		title.innerHTML=queryData[0];
+		//title.innerHTML=queryData[0];
 
 });
 

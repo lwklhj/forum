@@ -1,128 +1,48 @@
-/* main page navigation */
-/*nav ul{
-	float: right;
-}
-nav ul li{
-	width:50px;
-	height:30px;
-	margin:10px;
-	text-align: center;
-	line-height: 30px;
-	background-color: #406BA8;
-	color:#FFFFFF;
-}
-nav ul li a{
-	color:#FFFFFF;
-	text-decoration: none;
-
-}*/
-*{
-	margin: 0;
-	padding: 0;
-	word-wrap: break-word;
-}
-
-a{
-	
-	color: black;
+#menu_container{
+  width:250px;
+  float:left;
+  background-color: rgba(17, 16, 16, 0.2);
 
 }
-li{
-	display: inline-block;
-	list-style-type: none;
+#content ul li{
+  text-align: center;
+  list-style-type: none;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
-section{
-	position: relative;
-	width: 98%;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: #FFFFFF;
-	
+.item{
+  color:rgb(162, 161, 161);
+
 
 }
-article{
-	position: relative;
-	width: 98%;
-	margin-left: auto;
-	margin-right: auto;
-
+.main_menu{
+  font-size:20px;
+  color:rgb(255, 255, 255);
 }
-hr{
-	border-top: 1px solid black;
+#content ul li ul li:hover{
+  background-color: #2A2B38;
+  cursor: pointer;
 }
-.hrDot{
-	margin-top: 5px;
-	border-top: 1px solid #8c8b8b;
+/* every table 230;*/
+#displayBox{
+  width:690px;
+  float:right;
+  background-color: rgba(17, 16, 16, 0.2);
 }
-body{
-	background-color: #66BEED;
-}
-/* menu */
-.menu_wrapper{
-	text-align: center;
-
-}
-.menu_item{
-	background-color: #129690;
-}
-.menu_item:hover{
-	cursor: pointer;
-	background-color:  #13EDE2;
-}
-.menu_item{
-	display: inline-block;
-	height: 30px;
-	width:200px;
-	padding: 10px;
-	margin:4px;
-	box-shadow: 1px 1px 2px 2px #777777;
-	text-align: center;
-
-}
-/*  item box */
 table{
-	border-collapse: collapse;
-	width:90%;
-	margin:auto;
-	display:none;
-	empty-cells: show;
-	
+  width:100%;
+  empty-cells: show;
+  text-align: center;
 }
-.courseIcon{
-	width: 170px;
-	height:170px;
+tr{
+  height:100px;
+  margin:20px;
+
 }
 td{
-	margin-top: 5px;
-	/*width: 400px;*/
-	width: 20%;
-	
-	padding: 10px;
-	
+  width:230px;
 }
-td>a{
-	float: left;
+td a{
+  text-decoration: none;
+  color:rgb(227, 220, 220);
 }
-dl{
-	
-	margin-left:32.5%;
-}
-dt{
-	font-weight: 700;
-}
-strong{
-	color:blue;
-}
-.academic_item{
-	height:390px;
-	
-	overflow: auto;
-}
-.cca_item{
-	height:450px;
-	
-	overflow: auto;
-}
-
-
-

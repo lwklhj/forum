@@ -15,13 +15,27 @@
 
 
 }
+.item:hover{
+  color:rgb(162, 161, 161);
+  cursor: pointer;
+
+}
 .main_menu{
   font-size:20px;
   color:rgb(255, 255, 255);
 }
 #content ul li ul li:hover{
   background-color: #2A2B38;
-  cursor: pointer;
+
+}
+.item ul{
+  border: 1px solid rgb(69, 85, 134);
+  display:none;
+}
+.item ul li a{
+  color:rgb(193, 189, 189);
+  text-decoration: none;
+  font-size: 14px;
 }
 #mainThread{
   width:690px;

@@ -12,6 +12,11 @@ $(document).ready(function(){
 	$("#queryInfo").click(function(){
 		window.location.href = "post.html?type="+queryData[0]+"&name="+queryData[1];
 	})
+	$(".item").click(function(){
+		$(this).children("ul").toggle(200);
+		//$(this).parents(".main_menu").siblings().children(".item").children("ul").css();
+		$(this).siblings(".item").children("ul").hide();
+	})
 		//
 
 

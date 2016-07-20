@@ -1,0 +1,91 @@
+#menu_container{
+  width:250px;
+  float:left;
+  background-color: rgba(17, 16, 16, 0.2);
+
+}
+#content ul li{
+  text-align: center;
+  list-style-type: none;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.item{
+  color:rgb(162, 161, 161);
+
+
+}
+.main_menu{
+  font-size:20px;
+  color:rgb(255, 255, 255);
+}
+#content ul li ul li:hover{
+  background-color: #2A2B38;
+  cursor: pointer;
+}
+#mainThread{
+  width:690px;
+  float:right;
+  background-color: rgba(17, 16, 16, 0.2);
+
+}
+table{
+  border-collapse: separate;
+  border-spacing: 0px 5px;;
+
+
+}
+
+
+.name{
+  width:400px;
+  color: #B6B6BF;
+
+}
+.name a{
+  text-decoration: none;
+  color:#B6B6BF;
+}
+.by,.date{
+  width:145px;
+  color: #B6B6BF;
+  text-align: center;
+}
+tr{
+  background-color: rgba(17, 16, 16, 0.2);
+  height:40px;
+
+}
+tbody tr:hover{
+  background-color: #2A2B38;
+  border:1px solid rgb(34, 61, 177);
+
+}
+#mainThread>a{
+  color:white;
+  text-decoration: none;
+  float:left;
+  padding:10px;
+  background-color: rgba(0,0,0,0.5);
+}
+#mainThread>a:hover{
+
+  background-color: rgba(207, 197, 197, 0.5);
+}
+#mainThread ul{
+  float:right;
+}
+#mainThread ul li{
+  list-style-type: none;
+
+  display:inline-block;
+
+}
+#mainThread ul li a{
+  text-decoration: none;
+  color:white;
+
+}
+#mainThread ul li:hover{
+  background-color: #2A2B38;
+}

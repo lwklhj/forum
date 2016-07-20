@@ -1,0 +1,59 @@
+#content{
+  width:948px;
+  margin: auto;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+li{
+	list-style-type: none;
+	display:inline;
+}
+
+
+form{
+	width:98%;
+	margin: auto;
+}
+section{
+	width: 97%;
+	margin: auto;
+	margin-top: 20px;
+}
+#title_box{
+	width:500px;
+	height: 30px;
+	margin:10px;
+}
+#toolbox{
+	background-color: rgba(182, 172, 172, 0.5);;
+	padding: 10px;
+}
+textarea{
+	width: 100%;
+  background-color:rgb(153, 145, 145):
+
+}
+#title,textarea{
+	font-size: 18px;
+	font-family: Arial;
+}
+.submit:hover,button:hover{
+	background-color: #C3D5DB;
+}
+.submit{
+	padding: 10px;
+	margin: 10px;
+}
+#input_area{
+	border:1px solid #7F8587;
+}
+#submit{
+	margin-left: 10px;
+
+}
+p>a{
+	text-decoration: none;
+	color: blue;
+}

@@ -1,0 +1,86 @@
+#content{
+  width: 948px;
+  margin:auto;
+}
+a{
+	text-decoration: none;
+	color: rgb(214, 208, 208);;
+}
+li{
+	list-style-type: none;
+	display:inline;
+}
+h1{
+	text-align: center;
+	color:rgb(247, 244, 247);
+	font-size: 40px;
+	font-family: Calibri;
+	text-decoration: underline;
+	padding-bottom: 10px;
+}
+#comments{
+	padding-top:50px;
+}
+.box{
+	margin: auto;
+	outline:solid rgb(247, 244, 247) 2px;
+	height:500px;
+	width:75%;
+
+}
+.box>img{
+  float:right;
+}
+.namey{
+	text-decoration: underline
+}
+span>p{
+	display: inline-block;
+}
+div p{
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom:10px;
+}
+#content>p{
+	height:30px;
+}
+#content>p>a{
+	color: blue;
+}
+hr{
+	outline: solid black 1px;
+}
+#nmspic {
+	float: right;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+p{
+	overflow-wrap: normal;
+}
+.sentence{
+	float: left;
+}
+#button{
+	float:right;
+}
+.commentComment{
+	width:80%;
+	border-radius:25px;
+}
+.replyButton{
+	width:10%;
+}
+.date{
+	float:right;
+}
+form{
+	padding:10px;
+}
+.replybutton{
+	padding:10px;
+}

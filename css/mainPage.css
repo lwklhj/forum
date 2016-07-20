@@ -1,0 +1,62 @@
+#menu_container{
+  width:250px;
+  float:left;
+  background-color: rgba(17, 16, 16, 0.2);
+
+}
+#content ul li{
+  text-align: center;
+  list-style-type: none;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.item{
+  color:rgb(162, 161, 161);
+
+
+}
+.main_menu{
+  font-size:20px;
+  color:rgb(255, 255, 255);
+}
+#content ul li ul li:hover{
+  background-color: #2A2B38;
+  cursor: pointer;
+}
+/* every table 230;*/
+#displayBox{
+  width:690px;
+  float:right;
+
+  background-color: rgba(17, 16, 16, 0.2);
+
+}
+table{
+  width:100%;
+  display:none;
+  text-align: center;
+
+}
+tr{
+  height:100px;
+  margin:20px;
+
+}
+td{
+  width:230px;
+  height:270px;
+  border: 1px solid  rgba(17, 16, 16, 0.8);
+}
+td a{
+  text-decoration: none;
+  color:rgb(227, 220, 220);
+}
+td:hover{
+  background-color: #2A2B38;
+  border:1px solid rgb(34, 61, 177);
+}
+.courseIcon{
+  width:170px;
+  height:170px;
+
+}

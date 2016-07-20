@@ -11,4 +11,3 @@ $(document).ready(function(){
 		//title.innerHTML=queryData[0];
 
 });
-

@@ -1,284 +1,168 @@
-<!doctype html>
-<html>
+<!--
+  Name:
+  Admin no:
+  Module group:
+-->
+<!--//
+//                       _oo0oo_
+//                      o8888888o
+//                      88" . "88
+//                      (| -_- |)
+//                      0\  =  /0
+//                    ___/`---'\___
+//                  .' \\|     |// '.
+//                 / \\|||  :  |||// \
+//                / _||||| -:- |||||- \
+//               |   | \\\  -  /// |   |
+//               | \_|  ''\---/''  |_/ |
+//               \  .-\__  '-'  ___/-. /
+//             ___'. .'  /--.--\  `. .'___
+//          ."" '<  `.___\_<|>_/___.' >' "".
+//         | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+//         \  \ `_.   \_ __\ /__ _/   .-` /  /
+//     =====`-.____`.___ \_____/___.-`___.-'=====
+//                       `=---='
+//
+//
+//     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+//               佛祖保佑         永无BUG
+-->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Thread</title>
-	<script type="text/javascript" src="js/nav.js"></script>
-	<script type="text/javascript" src="js/jquery-3.0.0.js"></script>
-	<script type="text/javascript" src="js/threadpage.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/nav.css">
-	<link rel= "stylesheet" type="text/css" href="css/threadstyle.css">
-	<link rel="stylesheet" type="text/css" href="css/footer.css">
-	<link rel="stylesheet" type="text/css" href="css/nav.css">
-	<!-- Chat function -->
-	<script type="text/javascript" src="js/ChatFunction.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/ChatBox.css">
-	<!-- Login function -->
-	<script type="text/javascript" src="js/LoginFunction.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/loginPage.css">
-	<script>
-		window.onload = function() {StartupChecker();}
-	</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>threadpage</title>
+  <link rel="stylesheet" href="css/templete.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="css/threadpage.css" media="screen" title="no title" charset="utf-8">
+  <script type="text/javascript" src="js/threadpage.js"></script>
+  <!-- Chat function -->
+  <script type="text/javascript" src="js/ChatFunction.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/ChatBox.css">
+  <!-- Login function -->
+  <script type="text/javascript" src="js/LoginFunction.js"></script>
+
+  <script>
+    window.onload = function() {StartupChecker();}
+  </script>
 </head>
-
 <body>
-			<header>
-			<nav id="LoginBar">
-				<ul>
-					<li id="WelcomeUserName"></li>
-					<li><a href="http://www.nyp.edu.sg/">Main</a></li>
-					<li><a href="gpaCalculator.html">Tool</a></li>
-					<li id="LoginButton"><a href="#" onclick="WhenLoginPress()">Login</a></li>
-					<li id="LogoutButton"><a href="#" onclick="WhenLogoutPress()">Log Out</a></li>
-				</ul>
-			</nav>
-			
-			<div id="LoginBox">
-				<form onsubmit="LoginSubmit(); this.reset(); return false;">
-					<button id="CloseLBButton" onclick="CloseLoginbox()">X</button>
-					Username:<br><input id="loginName" maxlength="9" required><br>
-					Password:<br><input id="loginPW" type="password"  required>
-					<button onclick="LoginSubmit()" required>Submit</button>
-				</form>
-			</div>
+    <header>
 
-			<nav id="navBar">
-				<a href="index.html"><img style="height: 60px; margin: 5px;" src="img/logo/logo.png"></a>
-				<ul>
-					<li><a href="">SIT</a></li>
-					<li><a href="">SED</a></li>
-					<li><a href="">SDN</a></li>
-					<li><a href="">SBM</a></li>
-					<li><a href="">SHS</a></li>
-					<li><a href="">SCL</a></li>
-					<li><a href="">SIDM</a></li>
-					<li>
-						<a href="">CCA</a>
-						<ul>
-							<li><a href="">Academic club</a>
-								<ul>
-									<li><a href="">SBM</a></li>
-									<li><a href="">SCL</a></li>
-									<li><a href="">SDN</a></li>
-									<li><a href="">SEG</a></li>
-									<li><a href="">SHS</a></li>
-									<li><a href="">SIDM</a></li>
-									<li><a href="">SIT</a></li>
-								</ul>
-							</li>
-							
-							<li><a href="">Arts and Culture</a>
-								<ul >
-									<li><a href="">Chinese Culture</a></li>
-									<li><<a href="">CHinese Orchestra</a></li>
-									<li><<a href="">Dance Company</a></li>
-									<li><a href="">Danz INC</a></li>
-									<li><a href="">Der treff German</a></li>
-									<li><a href="">Foreign Bodies</a></li>
-									<li><a href="">Guitar Club</a></li>
-									<li><a href="">Harmonica Ensemble</a></li>
-									<li><a href="">Indian Culture</a></li>
-									<li><a href="">K-Wave Korean</a></li>
-								</ul>
-								<ul class="row2">
-									<li><a href="">L'Hexagon French</a></li>
-									<li><a href="">La Ballroom En Masse</a></li>
-									<li><a href="">Malay Culture</a></li>
-									<li><a href="">Makeup Artistry</a></li>
-									<li><a href="">Piano Ensemble</a></li>
-									<li><a href="">Stagearts</a></li>
-									<li><a href="">Sakuran Japanese Culture</a></li>
-									<li><a href="">Sketch Art</a></li>
-									<li><a href="">SoundCard</a></li>
-									<li><a href="">>Symphony Orchestra</a</li>
-								</ul>
-								<ul class="row3">
-									<li><a href="">Voice Ensemble</a></li>
-								</ul>
-							</li>
-							<li><a href="">Community Service and Environment</a></a>
-								<ul>
-									<li><a href="">BB Primers</a></li>
-									<li><a href="">CD Lionhearters Club</a></li>
-									<li><a href="">Community Service Club</a></li>
-									<li><a href="">Emcee Club</a></li>
-									<li><a href="">Geo Council</a></li>
-									<li><a href="">International Friendship Club</a></li>
-									<li><a href="">Leo Club</a></li>
-									<li><a href="">Mentoring Club</a></li>
-									<li><a href="">Photography Club</a></li>
-									<li><a href="">Rotaract Club</a></li>
-								</ul>
-							</li>
-							<li><a href="">Sports and Adventure</a></a>
-								<ul>
-									<li><a href="">Adventure Club</a></li>
-									<li><a href="">Aikido</a></li>
-									<li><a href="">Athletics</a></li>
-									<li><a href="">Badminton</a></li>
-									<li><a href="">Basketball</a></li>
-									<li><a href="">Bei Quan Dao</a></li>
-									<li><a href="">Bowling</a></li>
-									<li><a href="">Canoe Sprint</a></li>
-									<li><a href="">Dragonboat</a></li>
-									<li><a href="">Floorball</a></li>
-								</ul>
-								<ul class="row2">
-									<li><a href="">Ultimate Frisbee</a></li>
-									<li><a href="">Hockey</a></li>
-									<li><a href="">Judo</a></li>
-									<li><a href="">Kendo</a></li>
-									<li><a href="">Lifesaving</a></li>
-									<li><a href="">Netball</a></li>
-									<li><a href="">Silat</a></li>
-									<li><a href="">Soccer</a></li>
-									<li><a href="">Squash</a></li>
-									<li><a href="">Swimming</a></li>
-								</ul>
-								<ul class="row3">
-									<li><a href="">Table Tennis</a></li>
-									<li><a href="">Taekwondo</a></li>
-									<li><a href="">Tchoukball</a></li>
-									<li><a href="">Tennis</a></li>
-									<li><a href="">Taekwondo</a></li>
-									<li><a href="">Tchoukball</a></li>
-									<li><a href="">Tennis</a></li>
-									<li><a href="">Touch Football</a></li>
-									<li><a href="">Volleyball</a></li>
-									<li><a href="">Water Polo</a></li>
-								</ul>
-								<ul class="row4">
-									<li><a href="">Zhonghua Wushu</a></li>
-								</ul>
-							
-							</li>
-							<li><a href="">Leadership and Development</a>
-								<ul>
-									<li><a href="">Ambassadorial Team</a></li>
-									<li><a href="">Current Affairs & Debating Club</a></li>
-									<li><a href="">Entrepreneurship Club</a></li>
-									<li><a href="">Library Champion</a></li>
-									<li><a href="">National Youth Achievement Award</a></li>
-									<li><a href="">Students' Union</a></li>
-									<li><a href="">Team Outreach</a></li>
-								</ul>
-							</li>
-							<li><a href="">Mind Sports</a>
-								<ul>
-									<li><a href="">Mind Sports</a></li>
-								</ul>
-							</li>
+      <nav id="LoginBar">
+        <img src="img/logo/logo.png" alt="">
+        <ul>
+          <li><<a href="#" id="WelcomeUserName"></a></li>
+          <li><a href="http://www.nyp.edu.sg/">Main</a></li>
+          <li><a href="gpaCalculator.html">Tool</a></li>
 
-							<li><a href="">Interest Group</a>
-								<ul>
-									<li><a href="">Astronomy Club</a></li>
-									<li><a href="">Live Audio</a></li>
-									<li><a href="">NYP Lion & Dragon Dance Troupe</a></li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li><a href="">Others</a>
-						<ul>
-							<li><a href="">Game</a>
-								<ul>
-									<li><a href="">LOL</a></li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</nav>
-		</header>
-	<section id="content">
+          <li id="LoginButton"><a href="#" onclick="WhenLoginPress()">Login</a></li>
+          <li id="LogoutButton"><a href="#" onclick="WhenLogoutPress()">Log Out</a></li>
+          <li><a href="contact.html">About</a></li>
+        </ul>
+      </nav>
 
-		<p>
-			<a href="index.html">NYP</a>
-			<em>>></em>
-			<Strong>SIT</strong>
-		</p>
-		<hr>
-	
-		<h1 id="thread">Thread 1</h1>
-		<div class="box">
-			<span>
-				<p>By: </p>
-				<p class="name">Crescens Tan</p>
-			</span>
-			<p class="sentence">No man's sky is going to be a great game. It has a open world concept and the graphics is just beautiful. I am so excited for this upcoming game! too bad I have to wait for another 2 years.Whether a distant mountain or a planet hanging low on the horizon, you can go there. You can fly seamlessly from the surface of a planet to another, and every star in the sky is a sun that you can visit.
-			Where you’ll go and how fast you’ll make your way through this universe is up to you. It’s yours for the taking.Explore uncharted solar systems and catalogue unique new forms of life. Every planet’s landscape is different from the next, and populated by species never before encountered.
-			Find ancient artefacts that could reveal the secrets behind the universe.
-			Choose whether to share your discoveries with other players. They’re exploring the same vast universe in parallel; perhaps you’ll make your mark on their worlds as well as your own. This is as much I know about No Man's Sky, I would like to know about your opinions on this upcoming game.</p>
-			<img id="nmspic" src="img/noManSky.jpeg" style="width:304px;height:228px;">
-		</div>
-		<h1 id="comments">Comments</h1>
-		
-			<div class="box">
-				<!--comment 1-->
-					<span class="NameBox">
-						<p>By: </p>
-						<p class="name">He Fei</p>
-						<p class="date">19 Aug 2013</p>
-					</span>	
-						<p class="sentence">I think this game is only okay, there is no story plot and only lets you explore the open world. It would be much better if there was a story line. I'm sure people  would be bored of this game afte awhile. </p>
-						<!--comment box-->
-							<form class="comments">
-								<input class="commentComment" type="text" placeholder="comments">
-							</form>	
-							<span class="replybutton">	
-							<button  class="replyButton">reply</button>
-							</span>
-					<hr>
-				<!--comment 2-->
-					<span class="NameBox">
-						<p>By: </p>
-						<p class="name">Jian An</p>
-						<p class="date">6 jan 2014</p>
-					</span>	
-						<p>Yeah! I heard it is coming out on 9 August. an't wait to get my hands on it!</p>
-						<!--comment box-->
-							<form class="comments">
-								<input class="commentComment" type="text" placeholder="comments">
-							</form>
-							<span class="replybutton">	
-							<button  class="replyButton">reply</button>
-							</span>
-					<hr>
-				<!--comment 3-->
-					<span class="NameBox">
-						<p>By: </p>
-						<p class="name">Woon Kit</p>
-						<p class="date">5 june 2014</p>
-					</span>	
-						<p>I wish my computer can support it, if not it will a pity I can't play such a beautiful game.</p>
-						<!--comment box-->
-							<form class="comments">
-								<input class="commentComment" type="text" placeholder="comments">
-							</form>	
-							<span class="replybutton">	
-							<button  class="replyButton">reply</button>
-							</span>
-					<hr>
-					<button id="button">Comment</button>
-		</div>
-	
-		</section>
-		<!-- footer -->
-		<footer>
-			<a href="http://www.nyp.edu.sg/others/copyright-and-disclaimer">Copyright and Disclaimer</a>
-			<strong>|</strong>
-			<a href="http://www.nyp.edu.sg/others/privacy-policy">Privacy Policy</a>
-			<strong>|</strong>
-			<a href="http://www.nyp.edu.sg/others/organisational-awards">Organizational Awards</a>
-			<strong>|</strong>
-			<a href="Contact Page.html">Contact Us</a>
-			<hr>
-			<p>Nanyang Polytechnic 180 Ang Mo Kio Avenue 8 Singapore 569830 Tel:6451 5115<br>
-	       		Copyright© 2013 NYP, Singapore. All rights reserved.<br>
-	      		 Best viewed at 1920 x 1080 resolution with Firefox.</p>
-		</footer>
-		<!-- Chat -->
+      <div id="LoginBox">
+        <form onsubmit="LoginSubmit(); this.reset(); return false;">
+          <button id="CloseLBButton" onclick="CloseLoginbox()">X</button>
+          Username:<br><input id="loginName" maxlength="9" required><br>
+          Password:<br><input id="loginPW" type="password"  required>
+          <button onclick="LoginSubmit()" required>Submit</button>
+        </form>
+      </div>
+
+
+    </header>
+    <div id="content">
+      <p>
+  			<a href="mainpage.html">NYP</a>
+  			<em>>></em>
+  			<Strong>SIT</strong>
+  		</p>
+  		<hr>
+
+  		<h1 id="thread">Thread 1</h1>
+  		<div class="box">
+    			<span>
+    				<p>By: </p>
+    				<p class="name">Crescens Tan</p>
+    			</span>
+    			<p class="sentence">No man's sky is going to be a great game. It has a open world concept and the graphics is just beautiful. I am so excited for this upcoming game! too bad I have to wait for another 2 years.Whether a distant mountain or a planet hanging low on the horizon, you can go there. You can fly seamlessly from the surface of a planet to another, and every star in the sky is a sun that you can visit.
+    			Where you’ll go and how fast you’ll make your way through this universe is up to you. It’s yours for the taking.Explore uncharted solar systems and catalogue unique new forms of life. Every planet’s landscape is different from the next, and populated by species never before encountered.
+    			Find ancient artefacts that could reveal the secrets behind the universe.
+    			Choose whether to share your discoveries with other players. They’re exploring the same vast universe in parallel; perhaps you’ll make your mark on their worlds as well as your own. This is as much I know about No Man's Sky, I would like to know about your opinions on this upcoming game.</p>
+    			<img id="nmspic" src="img/noManSky.jpeg" style="width:304px;height:228px;">
+  		</div>
+  		<h1 id="comments">Comments</h1>
+
+  			<div class="box">
+  				<!--comment 1-->
+  					<span class="NameBox">
+  						<p>By: </p>
+  						<p class="name">He Fei</p>
+  						<p class="date">19 Aug 2013</p>
+  					</span>
+  						<p class="sentence">I think this game is only okay, there is no story plot and only lets you explore the open world. It would be much better if there was a story line. I'm sure people  would be bored of this game afte awhile. </p>
+  						<!--comment box-->
+  							<form class="comments">
+  								<input class="commentComment" type="text" placeholder="comments">
+  							</form>
+  							<span class="replybutton">
+  							<button  class="replyButton">reply</button>
+  							</span>
+  					<hr>
+  				<!--comment 2-->
+  					<span class="NameBox">
+  						<p>By: </p>
+  						<p class="name">Jian An</p>
+  						<p class="date">6 jan 2014</p>
+  					</span>
+  						<p>Yeah! I heard it is coming out on 9 August. an't wait to get my hands on it!</p>
+  						<!--comment box-->
+  							<form class="comments">
+  								<input class="commentComment" type="text" placeholder="comments">
+  							</form>
+  							<span class="replybutton">
+  							<button  class="replyButton">reply</button>
+  							</span>
+  					<hr>
+  				<!--comment 3-->
+  					<span class="NameBox">
+  						<p>By: </p>
+  						<p class="name">Woon Kit</p>
+  						<p class="date">5 june 2014</p>
+  					</span>
+  						<p>I wish my computer can support it, if not it will a pity I can't play such a beautiful game.</p>
+  						<!--comment box-->
+  							<form class="comments">
+  								<input class="commentComment" type="text" placeholder="comments">
+  							</form>
+  							<span class="replybutton">
+  							<button  class="replyButton">reply</button>
+  							</span>
+  					<hr>
+  					<button id="button">Comment</button>
+  		</div>
+
+    </div>
+    <footer>
+      <div>
+      <a href="http://www.nyp.edu.sg/others/copyright-and-disclaimer">Copyright and Disclaimer</a>
+      <a href="http://www.nyp.edu.sg/others/privacy-policy">Privacy Policy</a>
+      <a href="http://www.nyp.edu.sg/others/organisational-awards">Organizational Awards</a>
+      <hr>
+      <p>Nanyang Polytechnic 180 Ang Mo Kio Avenue 8 Singapore 569830 Tel:6451 5115<br>
+            Copyright© 2016 NYP, Singapore. All rights reserved.<br>
+             Best viewed at 1920 x 1080 resolution with Firefox.</p>
+        </div>
+
+    </footer>
+    <!-- Chat -->
+
 		<a onclick="CBToggler()" href="#"><img id="CBToggler" src="img/Chatbox.png"></a>
-		
+
 		<div id="CBWrapper" style="display: none;">
 			<div id="CBComments">
 				<div class="CBTextBG">
@@ -286,31 +170,28 @@
 					<span>22/7/2016 16:55</span>
 					<p>Hello!</p>
 				</div>
-				<div class="CBTextBG">				
+				<div class="CBTextBG">
 					<span class="CBNames">Caroline</span>
 					<span>22/7/2016 16:55</span>
 					<p>Hi!</p>
 				</div>
 				<div id="CBHidden" style="visibility: hidden;"></div>
 			</div>
-			
+
 			<p class="CBNameHeader">Online<p>
 			<div id="CBUsers">
 				<p class="CBNames">Hendry</p>
 				<p class="CBNames">Caroline</p>
 			</div>
-			
+
 			<div id="CBChatField">
 				<form onsubmit="this.reset(); return false">
 					<label style="display: none;">Message:</label><input id="CBCommentData" required></input>
 					<button onclick="CBCommentSend()">Send</button>
 				</form>
 			</div>
-		
+
 			<div id="CBTogglerBG"></div>
 		</div>
-	</section>
 </body>
-
-
 </html>

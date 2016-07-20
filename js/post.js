@@ -7,7 +7,7 @@ var getQueryString=function(field,url){
 
 var queryData=[getQueryString("type"),getQueryString("name")];
 function redirect(){
-    window.location.href = "ForumsThreads.html?type="+queryData[0]+"&name="+queryData[1];
+    window.location.href = "forumThread.html?type="+queryData[0]+"&name="+queryData[1];
 }
 $(document).ready(function()
 {
@@ -18,9 +18,9 @@ $(document).ready(function()
         var finalCount = 0;
         $.each(wordCounts, function(k, v) {
             finalCount += v;
-            
+
         });
         $('#display_count').html(finalCount);
-        am_cal(finalCount);
+        //am_cal(finalCount);
     }).keyup();
- }); 
+ });

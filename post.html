@@ -36,6 +36,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>template</title>
   <link rel="stylesheet" href="css/templete.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="css/post.css" media="screen" title="no title" charset="utf-8">
+    <script type="text/javascript" src=js/jquery.js></script>
+  <script type="text/javascript" src=js/post.js></script>
   <!-- Chat function -->
   <script type="text/javascript" src="js/ChatFunction.js"></script>
   <link rel="stylesheet" type="text/css" href="css/ChatBox.css">
@@ -74,13 +77,58 @@
 
     </header>
     <div id="content">
-      <section>
-        <aside></aside>
-        <article></article>
+      <!--  data-->
+    	<div id="wrapper">
+    	<section>
+    		<p>
+    			<a href="index.html">NYP</a>
+    			<em>>></em>
+    			<a href="ForumsThreads.html">SIT</a>
+    			<em>>></em>
+    			<Strong>Information Technology</strong>
+    		</p>
+    	</section>
+    	<section id="data">
+    		<hr>
+    		<form method="get" action="">
+    			<label id="title">Title:
+    				<input type="text" name="title" size="20" id="title_box" placeholder="Enter here">
+    			</label>
+    			<div id="input_area">
+    				<div id="toolbox">				<select name="font">
+    						<option value="Arial">Arial</option>
+    						<option value="Verdana">Verdana</option>
+    					</select>
+    					<select name="color">
+    						<option value="Red">Red</option>
+    						<option value="green">Green</option>
+    					</select>
+    					<select name="fontSize">
+    						<option value="16">16</option>
+    						<option value="18">18</option>
+    					</select>
+    					<button type="button">B</button>
+    					<button type="button">/</button>
+    					<button type="button">U</button>
+    				</div>
 
-        </article>
 
-      </section>
+
+
+    				<textarea name="comment" rows="20" id="word_count"></textarea>
+    				<p>Total Words:<span id="display_count">0</span></p>
+
+    			</div>
+
+    		</form>
+
+    		<div id="submit">
+    			<input type="submit" name="Submit" class="submit" onclick="redirect()">
+    			<button type="button" class="submit" onclick="redirect()">Cancel</button>
+    		</div>
+    		<hr>
+    	</section>
+    	</div>
 
     </div>
     <footer>

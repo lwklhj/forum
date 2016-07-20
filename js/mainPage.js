@@ -1,20 +1,32 @@
 $(document).ready(function(){
-	$(document).on("click",".menu_wrapper a",function(){
-		var 
-		$menuList=$(this).parents(".menu_wrapper").children("a");
-		$itemList=$(this).parents(".menu_container").siblings(".item_container").children("table");
-		index=$menuList.index(this);
-		$(this).css("background-color","#14C9C0");
-		$(this).siblings().css("background-color","#129690");
+	$(document).on("click",".item",function(){
 
-		$itemList.eq(index).show(1000).siblings("table").hide();
+		var
+		$menuList=$(this).parents("ul").children("li");
+		menuIndex=$menuList.index(this);
+
+		$containerList=$(this).parents("#menulist").children("li")
+		containerIndex=$containerList.index($(this).parents("li"));
+		console.log(containerIndex);
+
+		if(containerIndex==0){
+			$displayItem=$("#academic").children("table");
+
+		}
+		else if(containerIndex==1){
+				$displayItem=$("#cca").children("table");
+		}
+			$displayItem.eq(menuIndex).show().siblings("table").hide();
+			$displayItem.parents("div").siblings("div").children("table").hide();
+
+
+
+
+
+
+
+
 
 	});
-	$(".item_container table:first-child").show();
-	$(".menu_wrapper a:first-child").css("background-color","#55EDE3");
-
-	
-	
-
+	$("#academic table:first-child").show();
 });
-

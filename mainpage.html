@@ -34,53 +34,69 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>template</title>
+  <title>NYP forum</title>
   <link rel="stylesheet" href="css/templete.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="css/mainpage.css" media="screen" title="no title" charset="utf-8">
+  	<script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/mainPage.js"></script>
+    <!-- Chat function -->
+    <script type="text/javascript" src="js/ChatFunction.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/ChatBox.css">
+    <!-- Login function -->
+    <script type="text/javascript" src="js/LoginFunction.js"></script>
+    <script>
+      window.onload = function() {StartupChecker();}
+    </script>
 </head>
 <body>
     <header>
 
-        <nav>
-          <img src="img/logo/logo.png" alt="">
-            <ul>
-              <li><a href="">Main</a></li>
-              <li> <a href="">Login</a></li>
-              <li><a href="">Tools</a></li>
-              <li><a href="">About us</a></li>
-            </ul>
+      <nav id="LoginBar">
+        <img src="img/logo/logo.png" alt="">
+        <ul>
+          <li><<a href="#" id="WelcomeUserName"></a></li>
+          <li><a href="http://www.nyp.edu.sg/">Main</a></li>
+          <li><a href="gpaCalculator.html">Tool</a></li>
 
-        </nav>
+          <li id="LoginButton"><a href="#" onclick="WhenLoginPress()">Login</a></li>
+          <li id="LogoutButton"><a href="#" onclick="WhenLogoutPress()">Log Out</a></li>
+          <li><a href="contact.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div id="LoginBox">
+        <form onsubmit="LoginSubmit(); this.reset(); return false;">
+          <button id="CloseLBButton" onclick="CloseLoginbox()">X</button>
+          Username:<br><input id="loginName" maxlength="9" required><br>
+          Password:<br><input id="loginPW" type="password"  required>
+          <button onclick="LoginSubmit()" required>Submit</button>
+        </form>
+      </div>
     </header>
     <div id="content">
       <section>
         <aside id="menu_container">
-          <ul>
+          <ul id="menulist">
             <li><span class="main_menu">Academic</span>
               <ul>
-                <li><span class="item">Information Technology</span></li>
-                <li><span class="item">Engineering</span></li>
-                <li><span class="item">Design</span></li>
-                <li><span class="item">Business Management </span></li>
-                <li><span class="item">Health Science</span></li>
-                <li><span class="item">Chemical and Life Science</span></li>
-                <li><span class="item">Interactive & Digital Media</span></li>
+                <li class="item"><span >Information Technology</span></li>
+                <li class="item"><span >Engineering</span></li>
+                <li class="item"><span >Design</span></li>
+                <li class="item"><span >Business Management </span></li>
+                <li class="item"><span >Health Science</span></li>
+                <li class="item"><span >Chemical and Life Science</span></li>
+                <li class="item"><span >Interactive & Digital Media</span></li>
               </ul>
             </li>
             <li><span class="main_menu">CCA</span>
               <ul>
-                <li><span class="item">Academic Club</span></li>
-                <li><span class="item">Arts & Culture Community</span></li>
-                <li><span class="item">Community Service</span></li>
-                <li><span class="item">Sports & Adventure</span></li>
-                <li><span class="item">Leadership & Character</span></li>
-                <li><span class="item">Minds Sport</span></li>
-                <li><span class="item">Interest Group</span></li>
-              </ul>
-            </li>
-            <li><span class="main_menu">Other</span>
-              <ul>
-                <li><span class="item">Games</span></li>
+                <li class="item"><span >Academic Club</span></li>
+                <li class="item"><span >Arts & Culture Community</span></li>
+                <li class="item"><span>Community Service</span></li>
+                <li class="item"><span >Sports & Adventure</span></li>
+                <li class="item"><span >Leadership & Character</span></li>
+                <li class="item"><span >Minds Sport</span></li>
+                <li class="item"><span >Interest Group</span></li>
               </ul>
             </li>
           </ul>
@@ -89,16 +105,17 @@
 
 
         </aside>
-        <article id="displayBox">
+        <aside id="displayBox">
           <!-- sit -->
+          <div id="academic">
           <table>
             <tbody>
               <tr>
                 <td>
-                  <a href="ForumsThreads.html?type=ac&name=sitThread"><figure><img src="img/logo/logo_sit_DIT.jpg" alt="" class="courseIcon"> <figcaption>Information Technology</figcaption></figure></a>
+                  <a href="forumThread.html?type=ac&name=sitThread"><figure><img src="img/logo/logo_sit_DIT.jpg" alt="" class="courseIcon"> <figcaption>Information Technology</figcaption></figure></a>
                 </td>
                 <td>
-                  <a href="ForumsThreads.html?type=ac&name=sbiThread"><figure><img src="img/logo/logo_sit_DBI.png" alt="" class="courseIcon"><figcaption>Business Informatics</figcaption></figure></a>
+                  <a href="forumThread.html?type=ac&name=sbiThread"><figure><img src="img/logo/logo_sit_DBI.png" alt="" class="courseIcon"><figcaption>Business Informatics</figcaption></figure></a>
                 </td>
                 <td>
                   <a href=""><figure><img src="img/logo/logo_sit_DICSF.png" alt="" class="courseIcon"><figcaption>Cyber Security & Forensics</figcaption></figure></a>
@@ -119,8 +136,7 @@
                 <td>
                     <a href=""><figure><img src="img/logo/logo_sit_DIS.png" alt="" class="courseIcon"><figcaption>Infocomm & Security</figcaption></figure></a>
                 </td>
-                <td></td>
-                <td></td>
+
               </tr>
             </tbody>
           </table>
@@ -129,30 +145,301 @@
             <tbody>
               <tr>
   							<td>
-  								<a href=""><img src="img/logo/logo_soe_CEP.jpg" alt="" class="courseIcon">Common Engineering</a>
+  								<a href=""><figure><img src="img/logo/logo_soe_CEP.jpg" alt="" class="courseIcon"><figcaption>Common Engineering</figcaption></figure></a>
   							</td>
   							<td>
-  								<a href=""><img src="img/logo/logo_soe_AEEP.jpg" alt="" class="courseIcon">Aerospace/Electrical/Electronic</a>
+  								<a href=""><figure><img src="img/logo/logo_soe_AEEP.jpg" alt="" class="courseIcon"><figcaption>Aerospace/Electrical/Electronic</figcaption></figure></a>
   							</td>
   							<td>
-  								<a href=""><img src="img/logo/logo_soe_AMP.jpg" alt="" class="courseIcon">Aerospace/Mechatronics</a>
-  								<dl>
-  									<dt><a href=""></a><Strong> C40</Strong></dt>
-  									<dd>Discuss about Aerospace/Mechatronics</dd>
-  								</dl>
+  								<a href=""><figure><img src="img/logo/logo_soe_AMP.jpg" alt="" class="courseIcon"><figcaption>Aerospace/Mechatronics</figcaption></figure></a>
   							</td>
-  							<td>
+  						</tr>
+            <tr>
+              <td>	<a href=""><figure><img src="img/logo/logo_soe_DMIT.jpg" alt="" class="courseIcon"><figcaption>Multimedia & Infocomm Technology</figcaption></figure></a></td>
+              <td><a href=""><figure><img src="img/logo/logo_soe_DAAT.jpg" alt="" class="courseIcon"><figcaption>Aeronautical & Aerospace Technology</figcaption></figure></a></td>
+              <td><a href=""><figure><img src="img/logo/logo_soe_DASM.jpg" alt="" class="courseIcon"><figcaption>Aerospace System & Management</figcaption></figure></a></td>
+            </tr>
+            <tr>
+              <td>	<a href=""><figure><img src="img/logo/logo_soe_DBME.jpg" alt="" class="courseIcon"><figcaption>Biomedical Engineering</figcaption></figure></a></td>
+              <td>	<a href=""><figure><img src="img/logo/logo_soe_DDPE.jpg" alt="" class="courseIcon"><figcaption>Digital & Precision Engineering</figcaption></figure></a></td>
+              <td><a href=""><figure><img src="img/logo/logo_soe_DEEE.jpg" alt="" class="courseIcon"><figcaption>Electrical Engineering with Eco-Design</figcaption></figure></a></td>
+            </tr>
+            <tr>
+              <td>	<a href=""><figure><img src="img/logo/logo_soe_DECC.jpg" alt="" class="courseIcon"><figcaption>Electronic Systems</figcaption></figure></a></td>
+              <td><a href=""><figure><img src="img/logo/logo_soe_DEB.jpg" alt="" class="courseIcon"><figcaption>Engineering with Business</figcaption></figure></a></td>
+              <td>	<a href=""><figure><img src="img/logo/logo_soe_DME.jpg" alt="" class="courseIcon"><figcaption>Mechatronics Engineering</figcaption></figure></a></td>
+            </tr>
+            <tr>
+              <td><a href=""><figure><img src="img/logo/logo_soe_DNMS.jpg" alt="" class="courseIcon"><figcaption>Nanotechnology & Materials Science</figcaption></figure></a></td>
+              <td>	<a href=""><figure><img src="img/logo/logo_soe_DTMT.jpg" alt="" class="courseIcon"><figcaption>Telematics & Media Technology</figcaption></figure></a></td>
+            </tr>
+            </tbody>
+          </table>
+          <!--sod-->
+          <table>
+            <tbody>
+              <tr>
+                <td><figure><a href=""><img src="img/logo/logo_sod_DID.png" alt="" class="courseIcon"><figcaption>Industrial Design</figcaption></figure></a></td>
+                <td><figure>	<a href=""><img src="img/logo/logo_sod_spatialDesign.jpg" alt="" class="courseIcon"><figcaption>Spatial Design</figcaption></figure></a></td>
+                <td><figure>		<a href=""><img src="img/logo/logo_sod_VisualCommunication.png" alt="" class="courseIcon"><figcaption>Visual Communication</figcaption></figure></a></td>
+              </tr>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/logo_sod_SAD.jpg" alt="" class="courseIcon"><figcaption>Sustainable Architectural Design</figcaption></figure></a></td>
+              </tr>
+            </tbody>
+          </table>
+          <!--sbm-->
+          <table>
+            <tbody>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/logo_sbm_AF.png" alt="" class="courseIcon"><figcaption>Accountancy & Finance</figcaption></figure></a></td>
+                <td><figure>	<a href=""><img src="img/logo/logo_sbm_BM.png" alt="" class="courseIcon"><figcaption>Business Management</figcaption></figure></a></td>
+                <td><figure>	<a href=""><img src="img/logo/logo_sbm_FBB.png" alt="" class="courseIcon"><figcaption>Food & Beverage Business</figcaption></figure></a></td>
+              </tr>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/logo_sbm_FMA.png" alt="" class="courseIcon"><figcaption>Fund Management & Administration</figcaption></figure></a></td>
+                <td><figure>	<a href=""><img src="img/logo/logo_sbm_HTM.png" alt="" class="courseIcon"><figcaption>Hospitality & Tourism Management</figcaption></figure></a></td>
+                <td>	<figure>	<a href=""><img src="img/logo/logo_sbm_M.png" alt="" class="courseIcon"><figcaption>Marketing</figcaption></figure></a></td>
+              </tr>
+              <tr>
+                <td><figure><a href=""><img src="img/logo/logo_sbm_MMM.png" alt="" class="courseIcon"><figcaption>Mass Media Management</figcaption></figure></a></td>
+                <td><figure>	<a href=""><img src="img/logo/logo_sbm_SWM.png" alt="" class="courseIcon"><figcaption>Sport & Wellness Management</figcaption></figure></a></td>
+                <td><figure>		<a href=""><img src="img/logo/logo_sbm_BFS.png" alt="" class="courseIcon"><figcaption>Banking & Finance</figcaption></figure></a></td>
+              </tr>
+            </tbody>
+          </table>
+          <!--shs-->
+          <table>
+            <tbody>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/logo_shs_Nursing.jpg" alt="" class="courseIcon"><figcaption>Nursing</figcaption></figure></a></td>
+                <td><figure>	<a href=""><img src="img/logo/logo_shs_OHT.jpg" alt="" class="courseIcon"><figcaption>Oral Health Therapy</figcaption></figure></a></td>
+                <td><figure>		<a href=""><img src="img/logo/logo_shs_SS.jpg" alt="" class="courseIcon"><figcaption>Social Sciences (Social Work)</figcaption></figure></a></td>
+              </tr>
+
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/logo_shs_OT.jpg" alt="" class="courseIcon"><figcaption>Occupational Therapy</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/logo_shs_PT.jpg" alt="" class="courseIcon"><figcaption>Physiotherapy</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/logo_shs_DR.jpg" alt="" class="courseIcon"><figcaption>Diagnostic Radiography</figcaption></figure></a></td>
+              </tr>
+              <tr>
+                <td><figure><a href=""><img src="img/logo/logo_shs_RT.jpg" alt="" class="courseIcon"><figcaption>Radiation Therapy</figcaption></figure></a></td>
+              </tr>
+            </tbody>
+          </table>
+          <!---scl-->
+          <table>
+            <tbody>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/logo_scl_DMC.jpg" alt="" class="courseIcon"><figcaption>Medicinal Chemistry</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/logo_scl_BPT.jpg" alt="" class="courseIcon"><figcaption>Biologis & Process Technology</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/logo_scl_CGT.jpg" alt="" class="courseIcon"><figcaption>Chemical & Green Technology</figcaption></figure></a></td>
+              </tr>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/logo_scl_DPS.jpg" alt="" class="courseIcon"><figcaption>Pharmaceutical Science</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/logo_scl_DFSN.jpg" alt="" class="courseIcon"><figcaption>Food Science & Nutrition</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/logo_scl_CPT.jpg" alt="" class="courseIcon"><figcaption>Chemical & Pharmaceutical Technology</figcaption></figure></a></td>
+              </tr>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/logo_scl_DMB.jpg" alt="" class="courseIcon"><figcaption>Molecular Biotechnology</figcaption></figure></a></td>
+              </tr>
+            </tbody>
+
+          </table>
+          <!--sid-->
+          <table>
+            <tbody>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/logo_sid_DVE.png" alt="" class="courseIcon"><figcaption>Digital Visual Effects</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/logo_sid_ID.png" alt="" class="courseIcon"><figcaption>Interaction Design</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/logo_sid_GAD.png" alt="" class="courseIcon"><figcaption>Digital Game Art & Design</figcaption></figure></a></td>
+              </tr>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/logo_sid_A.png" alt="" class="courseIcon"><figcaption>Animation</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/logo_sid_MGBD.png" alt="" class="courseIcon"><figcaption>Motion Graphics and Broadcast Design</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/logo_sid_GDT.png" alt="" class="courseIcon"><figcaption>Game Development & Technology</figcaption></figure></a></td>
+              </tr>
+            </tbody>
+          </table>
+        <!--cca-->
+        </div>
+        <div id="cca">
+          <!--academic club-->
+          <table>
+            <tbody>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/cca_ac_SBM.png" alt="" class="courseIcon"><figcaption>SBM Club</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_ac_SCL.png" alt="" class="courseIcon"><figcaption>SCL Club</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_ac_SDN.png" alt="" class="courseIcon"><figcaption>SDN Club</figcaption></figure></a></td>
+              </tr>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/cca_ac_SEG.png" alt="" class="courseIcon"><figcaption>SEG Club</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_ac_SHS.png" alt="" class="courseIcon"><figcaption>SHS Club</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_ac_SIDM.png" alt="" class="courseIcon"><figcaption>SIDM Club</figcaption></figure></a></td>
+              </tr>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/cca_ac_SIT.png" alt="" class="courseIcon"><figcaption>SIT Club</figcaption></figure></a></td>
+              </tr>
 
             </tbody>
           </table>
-          <table></table>
-          <table></table>
-          <table></table>
-          <table></table>
-          <table></table>
+          <!--arts and culture-->
+          <table>
+            <tbody>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/cca_arts_CCG2.png" alt="" class="courseIcon"><figcaption>Chinese Cultural Group</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_arts_CO.png" alt="" class="courseIcon"><figcaption>Chinese Orchestra</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_arts_DC2.png" alt="" class="courseIcon"><figcaption>Dance Company</figcaption></figure></a></td>
+              </tr>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/cca_arts_DI.png" alt="" class="courseIcon"><figcaption>Danz Inc.</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_arts_DTG.png" alt="" class="courseIcon"><figcaption>Der Treff German Club</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_arts_FB.png" alt="" class="courseIcon"><figcaption>Foreign Bodies Dance Group</figcaption></figure></a></td>
+              </tr>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/cca_arts_GC.png" alt="" class="courseIcon"><figcaption>Guitar Club</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_arts_HE.png" alt="" class="courseIcon"><figcaption>Harmonica Ensemble</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_arts_ICG.png" alt="" class="courseIcon"><figcaption>Indian Cultural Group</figcaption></figure></a></td>
+              </tr>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/cca_arts_KWAVE.png" alt="" class="courseIcon"><figcaption>K-Wave Korean Club</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_arts_LHF.png" alt="" class="courseIcon"><figcaption>L' Hexagone French Club</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_arts_BALLROOM2.png" alt="" class="courseIcon"><figcaption>La Ballroom En Masse</figcaption></figure></a></td>
+              </tr>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/cca_arts_MCG.png" alt="" class="courseIcon"><figcaption>Malay Cultural Group</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_arts_MUA.png" alt="" class="courseIcon"><figcaption>Make-up Artistry</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_arts_PE.png" alt="" class="courseIcon"><figcaption>Piano Ensemble</figcaption></figure></a></td>
+              </tr>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/cca_arts_SA.png" alt="" class="courseIcon"><figcaption>StageArts Drama & Theatre Management Team</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_arts_SJ.png" alt="" class="courseIcon"><figcaption>Sakuran Japanese Cultural Club</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_arts_SketchArt.png" alt="" class="courseIcon"><figcaption>Sketch Art</figcaption></figure></a></td>
+              </tr>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/cca_arts_SC.png" alt="" class="courseIcon"><figcaption>SoundCard</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_arts_SO.png" alt="" class="courseIcon"><figcaption>Symphony Orchestra</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_arts_VE.png" alt="" class="courseIcon"><figcaption>Voice Ensemble</figcaption></figure></a></td>
+              </tr>
 
-        </article>
+            </tbody>
+          </table>
+          <!--communty and service-->
+          <table>
+            <tbody>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/cca_cse_BB.png" alt="" class="courseIcon"><figcaption>BB Primers</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_cse_CDLION.png" alt="" class="courseIcon"><figcaption>CD Lionhearters Club</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_cse_CSC.png" alt="" class="courseIcon"><figcaption>Community Service Club</figcaption></figure></a></td>
+              </tr>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/cca_cse_EMCEE.png" alt="" class="courseIcon"><figcaption>Emcee Club</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_csa_GEO.png" alt="" class="courseIcon"><figcaption>Geo Council</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_csa_IFC.png" alt="" class="courseIcon"><figcaption>International Friendship Club</figcaption></figure></a></td>
+              </tr>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/cca_cse_LEO.png" alt="" class="courseIcon"><figcaption>Leo Club</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_cse_MENTORING.png" alt="" class="courseIcon"><figcaption>Mentoring Club</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_cse_PHOTOG.png" alt="" class="courseIcon"><figcaption>Photography Club</figcaption></figure></a></td>
+              </tr>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/cca_cse_RAC.png" alt="" class="courseIcon"><figcaption>Rotaract Club</figcaption></figure></a></td>
+              </tr>
+            </tbody>
+          </table>
+          <!--sport and advferture-->
+          <table>
+            <tbody>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/cca_sa_AC.png" alt="" class="courseIcon"><figcaption>Adventure Club</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_SA_A.png" alt="" class="courseIcon"><figcaption>Aikido</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_SA_ARCHERY.png" alt="" class="courseIcon"><figcaption>Archery</figcaption></figure></a></td>
+              </tr>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/cca_sa_ATHLETICS.png" alt="" class="courseIcon"><figcaption>Athletics</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_sa_BADMINTON.png" alt="" class="courseIcon"><figcaption>Badminton</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_sa_BBALL.png" alt="" class="courseIcon"><figcaption>Basketball</figcaption></figure></a></td>
+              </tr>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo//cca_sa_BQD.png" alt="" class="courseIcon"><figcaption>Bei Quan Dao</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_sa_BOWLING.png" alt="" class="courseIcon"><figcaption>Bowling</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_sa_CANOESPRINT.png" alt="" class="courseIcon"><figcaption>Canoe Sprint</figcaption></figure></a></td>
+              </tr>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/cca_sa_DRAGONBOAT.png" alt="" class="courseIcon"><figcaption>Dragon Boat</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_sa_FLOORBALL.png" alt="" class="courseIcon"><figcaption>Floorball</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_sa_FRISBEE.png" alt="" class="courseIcon"><figcaption>Ultimate Frisbee</figcaption></figure></a></td>
+              </tr>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/cca_sa_HOCKEY.png" alt="" class="courseIcon"><figcaption>Hockey</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_sa_JUDO.png" alt="" class="courseIcon"><figcaption>Judo</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_sa_KENDO.png" alt="" class="courseIcon"><figcaption>Kendo</figcaption></figure></a></td>
+              </tr>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/cca_sa_LIFESAVING.png" alt="" class="courseIcon"><figcaption>Lifesaving</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_sa_NETBALL.png" alt="" class="courseIcon"><figcaption>Netball</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_sa_SILAT.png" alt="" class="courseIcon"><figcaption>Silat</figcaption></figure></a></td>
+              </tr>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/cca_sa_SOCCER.png" alt="" class="courseIcon"><figcaption>Soccer</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_sa_SQUASH.png" alt="" class="courseIcon"><figcaption>Squash</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo//cca_sa_SWIMMING.png" alt="" class="courseIcon"><figcaption>Swimming</figcaption></figure></a></td>
+              </tr>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/cca_sa_TABLETENNIS.png" alt="" class="courseIcon"><figcaption>Table Tennis</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_sa_TAEKWONDO.png" alt="" class="courseIcon"><figcaption>Taekwondo</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_sa_TCHOUKBALL.png" alt="" class="courseIcon"><figcaption>Tchoukbal</figcaption></figure></a></td>
+              </tr>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/cca_sa_TENNIS.png" alt="" class="courseIcon"><figcaption>Tennis</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_sa_TOUCHFOOTBALL.png" alt="" class="courseIcon"><figcaption>Touch Football</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_sa_VOLLEYBALL.png" alt="" class="courseIcon"><figcaption>Volleyball</figcaption></figure></a></td>
+              </tr>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/cca_sa_WATERPOLO.png" alt="" class="courseIcon"><figcaption>Water Polo</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_sa_WUSHU.png" alt="" class="courseIcon"><figcaption>Zhonghua Wushu</figcaption></figure></a></td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- leadership and character development -->
+          <table>
+            <body>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/cca_LCD_AT.png" alt="" class="courseIcon"><figcaption>Ambassadorial Team</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_LCD_CADC.png" alt="" class="courseIcon"><figcaption>Current Affairs & Debating Club</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_LCD_EC.png" alt="" class="courseIcon"><figcaption>Entrepreneurship Club</figcaption></figure></a></td>
+              </tr>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/cca_LCD_LC.png" alt="" class="courseIcon"><figcaption>Library Champion</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_LCD_NYAA.png" alt="" class="courseIcon"><figcaption>National Youth Achievement Award (NYAA)</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_LCD_SU.png" alt="" class="courseIcon"><figcaption>Students' Union</figcaption></figure></a></td>
+              </tr>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/cca_LCD_TO.png" alt="" class="courseIcon"><figcaption>Team Outreach</figcaption></figure></a></td>
+              </tr>
 
+            </body>
+          </table>
+          	<!-- mind sport -->
+          <table>
+            <tbody>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/cca_MS_MS.png" alt="" class="courseIcon"><figcaption>Minds Sport</figcaption></figure></a></td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- Interest Group -->
+          <table>
+            <tbody>
+              <tr>
+                <td><figure>	<a href=""><img src="img/logo/cca_IG_astronomy.png" alt="" class="courseIcon"><figcaption>Astronomy Club</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_IG_liveAudio.png" alt="" class="courseIcon"><figcaption>Live Audio</figcaption></figure></a></td>
+                <td><figure><a href=""><img src="img/logo/cca_IG_lionDance.png" alt="" class="courseIcon"><figcaption>Lion Dance</figcaption></figure></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </aside>
       </section>
 
     </div>
@@ -168,5 +455,39 @@
         </div>
 
     </footer>
+    <!-- Chat -->
+
+		<a onclick="CBToggler()" href="#"><img id="CBToggler" src="img/Chatbox.png"></a>
+
+		<div id="CBWrapper" style="display: none;">
+			<div id="CBComments">
+				<div class="CBTextBG">
+					<span class="CBNames">Hendry</span>
+					<span>22/7/2016 16:55</span>
+					<p>Hello!</p>
+				</div>
+				<div class="CBTextBG">
+					<span class="CBNames">Caroline</span>
+					<span>22/7/2016 16:55</span>
+					<p>Hi!</p>
+				</div>
+				<div id="CBHidden" style="visibility: hidden;"></div>
+			</div>
+
+			<p class="CBNameHeader">Online<p>
+			<div id="CBUsers">
+				<p class="CBNames">Hendry</p>
+				<p class="CBNames">Caroline</p>
+			</div>
+
+			<div id="CBChatField">
+				<form onsubmit="this.reset(); return false">
+					<label style="display: none;">Message:</label><input id="CBCommentData" required></input>
+					<button onclick="CBCommentSend()">Send</button>
+				</form>
+			</div>
+
+			<div id="CBTogglerBG"></div>
+		</div>
 </body>
 </html>

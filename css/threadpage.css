@@ -1,6 +1,7 @@
 #content{
   width: 948px;
   margin:auto;
+  color:white;
 }
 a{
 	text-decoration: none;
@@ -37,7 +38,7 @@ h1{
 span>p{
 	display: inline-block;
 }
-div p{
+.box p{
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-top: 10px;
@@ -78,7 +79,7 @@ p{
 .date{
 	float:right;
 }
-form{
+.comments{
 	padding:10px;
 }
 .replybutton{

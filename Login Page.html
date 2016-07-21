@@ -50,7 +50,7 @@
     <header>
 
       <nav>
-        <img src="img/logo/logo.png" alt="">
+        <a href="mainpage.html"><img src="img/logo/logo.png" alt=""></a>
         <ul>
           <li><a id="username"></a></li>
           <li><a href="http://www.nyp.edu.sg/">Main</a></li>
@@ -76,11 +76,11 @@
 					<input class="btn" type="submit" value="Login"></input>
 				</fieldset>
 			</form>
-			
-			
+
+
 			<div id="Login_confirmation">
 				<p style="color: white; font-size: 20px;">You are logged in<p>
-				<a href="index.html">Click here to return back to the homepage</a>
+				<a href="mainpage.html">Click here to return back to the homepage</a>
 			</div>
         </article>
       </section>
@@ -112,7 +112,7 @@
     </footer>
 	<!-- Chat -->
 	<a onclick="Chatbox_toggler()" href="#"><img id="Chatbox_toggle" src="img/Chatbox_icon.png"></a>
-		
+
 	<div id="Chatbox_wrapper" style="display: none;">
 		<div id="Chatbox_text">
 			<div class="Chatbox_text_BG">
@@ -120,27 +120,27 @@
 				<span>22/7/2016 16:55</span>
 				<p>Hello!</p>
 			</div>
-			<div class="Chatbox_text_BG">				
+			<div class="Chatbox_text_BG">
 				<span class="Chatbox_names">Caroline</span>
 				<span>22/7/2016 16:55</span>
 				<p>Hi!</p>
 			</div>
 			<div id="Chatbox_hidden" style="visibility: hidden;"></div>
 		</div>
-			
+
 		<p class="Chatbox_name_title">Online<p>
 		<div id="Chatbox_users">
 			<p class="Chatbox_names">Hendry</p>
 			<p class="Chatbox_names">Caroline</p>
 		</div>
-			
+
 		<div id="Chatbox_field">
 			<form onsubmit="this.reset(); return false;">
 				<label style="display: none;">Message:</label><input id="Chatbox_data" required></input>
 				<button onclick="Chatbox_submit()">Send</button>
 			</form>
 		</div>
-		
+
 		<div id="Chatbox_toggle_BG"></div>
 	</div>
 </body>

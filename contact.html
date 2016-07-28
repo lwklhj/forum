@@ -34,14 +34,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>template</title>
+  <title>Tools</title>
   <link rel="stylesheet" href="css/templete.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/Contact Page.css">
+  <script type="text/javascript" src="js/Contact Us.js"></script>
   <!-- Chat function -->
   <script type="text/javascript" src="js/Chat Function.js"></script>
   <link rel="stylesheet" type="text/css" href="css/Chatbox.css">
   <!-- Login function -->
   <script type="text/javascript" src="js/Login Function.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/Login Page.css">
   <script>
   window.onload = function() {Onload_check();}
   </script>
@@ -53,9 +54,6 @@
 	document.getElementById("TelInjector").innerHTML = telcontact[i];
   }
   </script>
-  <style>
-  #content {color: white;}
-  </style>
 </head>
 <body>
     <header>
@@ -65,7 +63,7 @@
         <ul>
           <li><a id="username"></a></li>
           <li><a href="http://www.nyp.edu.sg/">Main</a></li>
-          <li><a href="gpaCalculator.html">Tool</a></li>
+          <li><a href="#">Tools</a></li>
 
           <li id="Login_button"><a href="Login Page.html">Login</a></li>
           <li id="Logout_button"><a href="#" onclick="Logout_submit()">Log Out</a></li>
@@ -75,32 +73,36 @@
 
 
     </header>
-    <div id="content" style="width:948px;text-align:center;margin:auto;">
-      <div style=" width: 100%; height: 750px; margin-left: auto; margin-right: auto; margin-top: 10px;text-align:center;">
-	    <h1 style="text-align: center;">About Us</h1>
-		<span>NYP Forum is built by a group of students in a goal of helping other students have a fulfilling life in NYP. As such we would like your feedback regarding NYP Forum to better enhance yours and others' experience using this forum.</span>
-		<div>_____________________________________________________________</div>
-        <h1 style="text-align: center;">Contact Us</h1>
-        <form action="Submitted Feedback.html">
-          <fieldset style="float:left;border: #67c1f5 1px solid; padding: 5px; margin: 10px; width: 400px; border-radius: 3px;">
-            <legend>By Message</legend>
-            <label>Your Name</label><input required style="border: #67c1f5 1px solid; padding: 5px; width: 400px; border-radius: 3px; margin: 10px;"></input><br>
-            <label>Your Email</label><input type="email" required style="border: #67c1f5 1px solid; padding: 5px; width: 400px; border-radius: 3px; margin: 10px;"></input><br>
-            <label>Your Tel No.</label><input type="tel" pattern="\d{8}" title="8 digit telephone number" required style="border: #67c1f5 1px solid; padding: 5px; width: 400px; border-radius: 3px; margin: 10px;"></input><br>
-            <label>Nature of Message</label><select style="border: #67c1f5 1px solid; padding: 5px; width: 411.6px; border-radius: 3px; margin: 10px;">
+    <div id="content">
+      <div>
+	    <h1><a href="javascript:switcher_1();">What is NYP Forum?</a></h1>
+		<span id="switch_1">We are building a better way for students to connect to one another. NYP Forum is built by a group of students on a misson to help other students have a fulfilling life.
+		As such we would like your feedback regarding NYP Forum to better enhance yours and others' experience using this forum.</span>
+		
+		<h1><a href="FAQ.html">FAQ >></a></h1>
+		<h1><a href="gpaCalculator.html">GPA Calculator >></a></h1>
+		
+        <h1><a href="javascript:switcher_2()">Contact Us</a></h1>
+        <form id="switch_2" action="Submitted Feedback.html">
+          <fieldset id="left_aside">
+            <legend><h2>By Message</h2></legend>
+            <input placeholder="Name" class="textField" required></input><br>
+            <input placeholder="Email address" class="textField" type="email" required></input><br>
+            <input placeholder="Mobile number" class="textField" type="tel" pattern="\d{8}" title="8 digit telephone number" required></input><br>
+            <select>
+			  <option selected="selected" disabled>Nature of Message</option>
               <option>Design of website</option>
               <option>Bugs/Problem of website</option>
               <option>Feature request</option>
               <option>Others</option>
             </select>
-            <label>Your Message</label><textarea required style="resize: none; border: #67c1f5 1px solid; padding: 5px; width: 400px; height: 200px; border-radius: 3px; margin: 10px;"></textarea>
-            <input type="submit" value="Submit" style="border: #67c1f5 1px solid; padding: 5px; border-radius: 3px; margin: 10px;"/>
+            <textarea placeholder="Description of issue/request" class="txtarea" required></textarea>
+            <input class="submit_btn" type="submit" value="Send Report"/>
           </fieldset>
-        </form>
-        <form>
-          <fieldset style="float:right;border: #67c1f5 1px solid; padding: 5px; margin: 10px; width: 400px; border-radius: 3px;">
-            <legend>By phone</legend>
-            <label>Contact developers through telephone number</label><select id="SelectedContact" onchange="ContactableChange()" style="border: #67c1f5 1px solid; padding: 5px; width: 411.6px; border-radius: 3px; margin: 10px;">
+          <fieldset id="right_aside">
+            <legend><h2>By phone</h2></legend>
+            <select id="SelectedContact" onchange="ContactableChange()">
+			  <option selected="selected" disabled>Contact developers through telephone number</option>
               <option value="0">Jian An</option>
               <option value="1">Crescens Tan</option>
               <option value="2">He Fei</option>

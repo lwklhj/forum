@@ -13,7 +13,7 @@ function Onload_check() {
 		//show chatbox, logout button, username
 		document.getElementById("Chatbox_toggle").style.display = "block";
 		document.getElementById("Logout_button").style.display = "inline-block";
-		document.getElementById("username").innerHTML = "Welcome " + "\"" + localStorage.getItem("Name") + "\"";
+		document.getElementById("username").innerHTML = "Welcome " + localStorage.getItem("Name");
 		//hide login button
 		document.getElementById("Login_button").style.display = "none";
 	}

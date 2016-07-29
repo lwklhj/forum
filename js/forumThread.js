@@ -1,3 +1,10 @@
+function Onload_check_forum_thread() {
+	if(localStorage.getItem("Name") == null)
+		document.getElementById("queryInfo").style.display = "none";
+	else
+		document.getElementById("queryInfo").style.display = "block";
+}
+
 var getQueryString=function(field,url){
 	var href=url ? url:window.location.href;
 	var reg=new RegExp("[?&]"+field+ "=([^&#]*)","i");

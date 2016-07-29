@@ -43,7 +43,7 @@
   <script type="text/javascript" src="js/Login Function.js"></script>
   <link rel="stylesheet" type="text/css" href="css/Login Page.css">
   <script>
-  window.onload = function() {Onload_check();}
+  window.onload = function() {Onload_check(); Ten_Seconds();}
   </script>
 </head>
 <body>
@@ -52,24 +52,40 @@
       <nav>
         <a href="mainpage.html"><img src="img/logo/logo.png" alt=""></a>
         <ul>
-          <li><a id="username"></a></li>
           <li><a href="http://www.nyp.edu.sg/">Main</a></li>
-          <li><a href="gpaCalculator.html">Tool</a></li>
+          <li><a href="Tools.html">Tools</a></li>
 
           <li id="Login_button"><a href="Login Page.html">Login</a></li>
+		  <li><a id="username"></a></li>
           <li id="Logout_button"><a href="#" onclick="Logout_submit()">Log Out</a></li>
-          <li><a href="contact.html">About</a></li>
         </ul>
       </nav>
 
 
     </header>
     <div id="content"style="height:500px;">
-      		<h1 id="ContactBox" style="text-align: center;color:white;margin:auto;">Thank you, your response has been recorded</h1>
+      		<h1 id="ContactBox" style="text-align: center;color:white;margin:auto;">Your response has been recorded</h1>
+			<p style="text-align: center; color: white;">You will be redirected to main page in <span id="Digit_Target"></span> seconds<p>
 
       </section>
 
     </div>
+	<script>
+		var counter = 10;
+		var Change_URL;
+		function Ten_Seconds() {
+			var Change_Digit = window.setInterval(Digit_Counter, 1000)
+			Change_URL = window.setTimeout(function(){document.location.href = "mainpage.html"}, 10000);
+		}
+		function Digit_Counter(){
+			if(counter < 0) {
+				counter = 10;
+				clearTimeout(Change_URL);
+				Change_URL = setTimeout(function(){document.location.href = "mainpage.html"}, 10000);
+			}
+			document.getElementById("Digit_Target").innerHTML = counter--;
+		}
+	</script>
     <footer>
       <div>
       <a href="http://www.nyp.edu.sg/others/copyright-and-disclaimer">Copyright and Disclaimer</a>

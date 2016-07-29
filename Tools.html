@@ -1,0 +1,162 @@
+<!--
+  Name:
+  Admin no:
+  Module group:
+-->
+<!--//
+//                       _oo0oo_
+//                      o8888888o
+//                      88" . "88
+//                      (| -_- |)
+//                      0\  =  /0
+//                    ___/`---'\___
+//                  .' \\|     |// '.
+//                 / \\|||  :  |||// \
+//                / _||||| -:- |||||- \
+//               |   | \\\  -  /// |   |
+//               | \_|  ''\---/''  |_/ |
+//               \  .-\__  '-'  ___/-. /
+//             ___'. .'  /--.--\  `. .'___
+//          ."" '<  `.___\_<|>_/___.' >' "".
+//         | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+//         \  \ `_.   \_ __\ /__ _/   .-` /  /
+//     =====`-.____`.___ \_____/___.-`___.-'=====
+//                       `=---='
+//
+//
+//     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+//               佛祖保佑         永无BUG
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tools</title>
+  <link rel="stylesheet" href="css/templete.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/Tools.css">
+  <script type="text/javascript" src="js/Tools.js"></script>
+  <!-- Chat function -->
+  <script type="text/javascript" src="js/Chat Function.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/Chatbox.css">
+  <!-- Login function -->
+  <script type="text/javascript" src="js/Login Function.js"></script>
+  <script>
+  window.onload = function() {Onload_check();}
+  </script>
+  <script>
+  function ContactableChange(){
+	var i = document.getElementById("SelectedContact").value;
+	console.log(i);
+	var telcontact = ["Tel No.: +65 7526 9182", "Tel No.: +65 5126 7182", "Tel No.: +65 2719 9182", "Tel No.: +65 0162 6172"];
+	document.getElementById("TelInjector").innerHTML = telcontact[i];
+  }
+  </script>
+</head>
+<body>
+    <header>
+
+      <nav>
+        <a href="mainpage.html"><img src="img/logo/logo.png" alt=""></a>
+        <ul>
+          <li><a href="http://www.nyp.edu.sg/">Main</a></li>
+          <li><a href="Tools.html">Tools</a></li>
+
+          <li id="Login_button"><a href="Login Page.html">Login</a></li>
+		  <li><a id="username"></a></li>
+          <li id="Logout_button"><a href="#" onclick="Logout_submit()">Log Out</a></li>
+        </ul>
+      </nav>
+
+
+    </header>
+    <div id="content">
+      <div>
+	    <h1><a href="javascript:switcher_1();">What is NYP Forum?</a></h1>
+		<span id="switch_1">We are building a better way for students to connect to one another. NYP Forum is built by a group of students on a misson to help other students have a fulfilling life.
+		As such we would like your feedback regarding NYP Forum to better enhance yours and others' experience using this forum.</span>
+		
+		<h1><a href="FAQ.html">FAQ >></a></h1>
+		<h1><a href="gpaCalculator.html">GPA Calculator >></a></h1>
+		
+        <h1><a href="javascript:switcher_2()">Contact Us</a></h1>
+        <form id="switch_2" action="Submitted Feedback.html">
+          <fieldset id="left_aside">
+            <legend><h2>By Message</h2></legend>
+            <input placeholder="Name" class="textField" required></input><br>
+            <input placeholder="Email address" class="textField" type="email" required></input><br>
+            <input placeholder="Mobile number" class="textField" type="tel" pattern="\d{8}" title="8 digit telephone number" required></input><br>
+            <select>
+			  <option selected="selected" disabled>Nature of Message</option>
+              <option>Design of website</option>
+              <option>Bugs/Problem of website</option>
+              <option>Feature request</option>
+              <option>Others</option>
+            </select>
+            <textarea placeholder="Description of issue/request" class="txtarea" required></textarea>
+            <input class="submit_btn" type="submit" value="Send Report"/>
+          </fieldset>
+          <fieldset id="right_aside">
+            <legend><h2>By phone</h2></legend>
+            <select id="SelectedContact" onchange="ContactableChange()">
+			  <option selected="selected" disabled>Contact developers through telephone number</option>
+              <option value="0">Jian An</option>
+              <option value="1">Crescens Tan</option>
+              <option value="2">He Fei</option>
+              <option value="3">Woon Kit</option>
+            </select>
+            <span id="TelInjector"></span>
+          </fieldset>
+        </form>
+      </div>
+
+    </div>
+    <footer>
+      <div>
+      <a href="http://www.nyp.edu.sg/others/copyright-and-disclaimer">Copyright and Disclaimer</a>
+      <a href="http://www.nyp.edu.sg/others/privacy-policy">Privacy Policy</a>
+      <a href="http://www.nyp.edu.sg/others/organisational-awards">Organizational Awards</a>
+      <hr>
+      <p>Nanyang Polytechnic 180 Ang Mo Kio Avenue 8 Singapore 569830 Tel:6451 5115<br>
+            Copyright© 2016 NYP, Singapore. All rights reserved.<br>
+             Best viewed at 1920 x 1080 resolution with Firefox.</p>
+        </div>
+
+    </footer>
+	<!-- Chat -->
+	<a onclick="Chatbox_toggler()" href="#"><img id="Chatbox_toggle" src="img/Chatbox_icon.png"></a>
+
+	<div id="Chatbox_wrapper" style="display: none;">
+		<div id="Chatbox_text">
+			<div class="Chatbox_text_BG">
+				<span class="Chatbox_names">Hendry</span>
+				<span>22/7/2016 16:55</span>
+				<p>Hello!</p>
+			</div>
+			<div class="Chatbox_text_BG">
+				<span class="Chatbox_names">Caroline</span>
+				<span>22/7/2016 16:55</span>
+				<p>Hi!</p>
+			</div>
+			<div id="Chatbox_hidden" style="visibility: hidden;"></div>
+		</div>
+
+		<p class="Chatbox_name_title">Online<p>
+		<div id="Chatbox_users">
+			<p class="Chatbox_names">Hendry</p>
+			<p class="Chatbox_names">Caroline</p>
+		</div>
+
+		<div id="Chatbox_field">
+			<form onsubmit="this.reset(); return false;">
+				<label style="display: none;">Message:</label><input id="Chatbox_data" required></input>
+				<button onclick="Chatbox_submit()">Send</button>
+			</form>
+		</div>
+
+		<div id="Chatbox_toggle_BG"></div>
+	</div>
+</body>
+</html>

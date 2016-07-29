@@ -56,6 +56,7 @@ input.submit_btn {border: 1px solid #bdc7d8; padding: 8px 10px; border-radius: 5
 
 
 @media screen and (max-width: 480px) {
+	#content {float: left; width:320px;}
 	#switch_1 {width: 260px;}
 	#switch_2 {width:260px; height: 720px;}
 	#content div h1 {width: 260px;}

@@ -91,21 +91,18 @@ tbody tr:hover{
 }
 #mainThread ul li{
   list-style-type: none;
-
+  color:white;
   display:inline-block;
 
 }
-#mainThread ul li a{
-  text-decoration: none;
-  color:white;
 
-}
 #mainThread ul li:hover{
   background-color: #2A2B38;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 480px) {
 	#menu_container {display: none;}
 	#mainThread {width: 320px; float:left; clear: left;}
-	
+
 }

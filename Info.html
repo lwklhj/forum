@@ -34,16 +34,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>template</title>
+  <title>Info</title>
   <link rel="stylesheet" href="css/templete.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/Info.css">
+  <script type="text/javascript" src="js/Info.js"></script>
   <!-- Chat function -->
   <script type="text/javascript" src="js/Chat Function.js"></script>
   <link rel="stylesheet" type="text/css" href="css/Chatbox.css">
   <!-- Login function -->
   <script type="text/javascript" src="js/Login Function.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/Login Page.css">
   <script>
-  window.onload = function() {Onload_check(); Login_confirmation();}
+  window.onload = function() {Onload_check();}
+  </script>
+  <script>
+  function ContactableChange(){
+	var i = document.getElementById("SelectedContact").value;
+	console.log(i);
+	var telcontact = ["Tel No.: +65 7526 9182", "Tel No.: +65 5126 7182", "Tel No.: +65 2719 9182", "Tel No.: +65 0162 6172"];
+	document.getElementById("TelInjector").innerHTML = telcontact[i];
+  }
   </script>
 </head>
 <body>
@@ -61,39 +70,50 @@
         </ul>
       </nav>
 
+
     </header>
     <div id="content">
-      <div id="Login_section">
-			<form id="Login_field" onsubmit="Login_submit(); return false;">
-				<fieldset>
-					<legend><h1>Login</h1></legend>
-					<input class="textField" id="Get_login_name" placeholder="Username" required></input>
-					<br>
-					<input class="textField" type="password" placeholder="Password" required></input>
-					<br>
-					<input class="btn" type="submit" value="Login"></input>
-				</fieldset>
-			</form>
+      <div>
+	    <h1><a href="javascript:switcher_1();">What is NYP Forum?</a></h1>
+		<span id="switch_1" style="display: none;">We are building a better way for students to connect to one another. NYP Forum is built by a group of students on a misson to help other students have a fulfilling life.
+		As such we would like your feedback regarding NYP Forum to better enhance yours and others' experience using this forum.</span>
+		
+		<h1><a href="FAQ.html">FAQ >></a></h1>
+		<h1><a href="gpaCalculator.html">GPA Calculator >></a></h1>
+		<h1><a onclick="NYP_tutorial_on()" href="#">NYP Forum Tutorial >></a></h1>
+		
+        <h1><a href="javascript:switcher_2()">Contact Us</a></h1>
+        <form id="switch_2" action="Submitted Feedback.html" style="display: none;">
+          <fieldset id="left_aside">
+            <legend><h2>By Message</h2></legend>
+            <input placeholder="Name" class="textField" required></input><br>
+            <input placeholder="Email address" class="textField" type="email" required></input><br>
+            <input placeholder="Mobile number" class="textField" type="tel" pattern="\d{8}" title="8 digit telephone number" required></input><br>
+            <select>
+			  <option selected="selected" disabled>Nature of Message</option>
+              <option>Design of website</option>
+              <option>Bugs/Problem of website</option>
+              <option>Feature request</option>
+              <option>Others</option>
+            </select>
+            <textarea placeholder="Description of issue/request" class="txtarea" required></textarea>
+            <input class="submit_btn" type="submit" value="Send Report"/>
+          </fieldset>
+          <fieldset id="right_aside">
+            <legend><h2>By phone</h2></legend>
+            <select id="SelectedContact" onchange="ContactableChange()">
+			  <option selected="selected" disabled>Contact the devs</option>
+              <option value="0">Jian An</option>
+              <option value="1">Crescens Tan</option>
+              <option value="2">He Fei</option>
+              <option value="3">Woon Kit</option>
+            </select>
+            <span id="TelInjector"></span>
+          </fieldset>
+        </form>
+      </div>
 
-
-			<div id="Login_confirmation">
-				<p style="color: white; font-size: 20px;">You are logged in<p>
-				<a href="mainpage.html">Click here to return back to the homepage</a>
-			</div>
-	  </div>
     </div>
-	<script>
-	function Login_confirmation() {
-		if(localStorage.getItem("Name") != null) {
-			document.getElementById("Login_confirmation").style.display = "block";
-			document.getElementById("Login_field").style.display = "none";
-		}
-		else {
-			document.getElementById("Login_confirmation").style.display = "none";
-			document.getElementById("Login_field").style.display = "block";
-		}
-	}
-	</script>
     <footer>
       <div>
       <a href="http://www.nyp.edu.sg/others/copyright-and-disclaimer">Copyright and Disclaimer</a>

@@ -11,7 +11,6 @@ li{
 	display:inline;
 }
 
-
 form{
 	width:98%;
 	margin: auto;
@@ -56,4 +55,9 @@ textarea{
 p>a{
 	text-decoration: none;
 	color: blue;
+}
+
+@media screen and (max-width: 480px) {
+	#content {float: left; width: 320px;}
+	#title_box {width: 230px;}
 }

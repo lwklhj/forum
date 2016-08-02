@@ -25,3 +25,9 @@ function switcher_4() {
 	else
 		document.getElementById("switch_4").style.display = "none"
 }
+
+function NYP_tutorial_on() {
+	localStorage.setItem("", 1);
+	document.location.href = "mainpage.html";
+	
+}

@@ -34,10 +34,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Tools</title>
+  <title>Info</title>
   <link rel="stylesheet" href="css/templete.css" media="screen" title="no title" charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="css/Tools.css">
-  <script type="text/javascript" src="js/Tools.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/Info.css">
+  <script type="text/javascript" src="js/Info.js"></script>
   <!-- Chat function -->
   <script type="text/javascript" src="js/Chat Function.js"></script>
   <link rel="stylesheet" type="text/css" href="css/Chatbox.css">
@@ -62,7 +62,7 @@
         <a href="mainpage.html"><img src="img/logo/logo.png" alt=""></a>
         <ul>
           <li><a href="http://www.nyp.edu.sg/">Main</a></li>
-          <li><a href="Tools.html">Tools</a></li>
+          <li><a href="Info.html">Info</a></li>
 
           <li id="Login_button"><a href="Login Page.html">Login</a></li>
 		  <li><a id="username"></a></li>
@@ -75,14 +75,15 @@
     <div id="content">
       <div>
 	    <h1><a href="javascript:switcher_1();">What is NYP Forum?</a></h1>
-		<span id="switch_1">We are building a better way for students to connect to one another. NYP Forum is built by a group of students on a misson to help other students have a fulfilling life.
+		<span id="switch_1" style="display: none;">We are building a better way for students to connect to one another. NYP Forum is built by a group of students on a misson to help other students have a fulfilling life.
 		As such we would like your feedback regarding NYP Forum to better enhance yours and others' experience using this forum.</span>
 		
 		<h1><a href="FAQ.html">FAQ >></a></h1>
 		<h1><a href="gpaCalculator.html">GPA Calculator >></a></h1>
+		<h1><a onclick="NYP_tutorial_on()" href="#">NYP Forum Tutorial >></a></h1>
 		
         <h1><a href="javascript:switcher_2()">Contact Us</a></h1>
-        <form id="switch_2" action="Submitted Feedback.html">
+        <form id="switch_2" action="Submitted Feedback.html" style="display: none;">
           <fieldset id="left_aside">
             <legend><h2>By Message</h2></legend>
             <input placeholder="Name" class="textField" required></input><br>
@@ -101,7 +102,7 @@
           <fieldset id="right_aside">
             <legend><h2>By phone</h2></legend>
             <select id="SelectedContact" onchange="ContactableChange()">
-			  <option selected="selected" disabled>Contact developers through telephone number</option>
+			  <option selected="selected" disabled>Contact the devs</option>
               <option value="0">Jian An</option>
               <option value="1">Crescens Tan</option>
               <option value="2">He Fei</option>

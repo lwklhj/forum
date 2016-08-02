@@ -85,3 +85,8 @@ p{
 .replybutton{
 	padding:10px;
 }
+
+@media screen and (max-width: 480px) {
+	#content {float: left; width: 320px;}
+	#nmspic {display: none;}
+}

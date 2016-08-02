@@ -60,3 +60,13 @@ td:hover{
   height:170px;
 
 }
+
+@media screen and (max-width: 480px) {
+	#slideshow {display: none;}
+	#menu_container {width: 320px;}
+	#displayBox {float: left; width: 320px;}
+	.courseIcon {display: none}
+	td {height: 100px;}
+	tr {width: 320px;}
+	figcaption {font-size: 15px;}
+}

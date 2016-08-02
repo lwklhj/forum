@@ -16,7 +16,7 @@ body{
 
 }
 
-#content {min-height: 100%;}
+#content {min-height: calc(100% - 179px);}
 
 header{
   background-color: #171A21;

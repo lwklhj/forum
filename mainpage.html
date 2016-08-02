@@ -46,6 +46,7 @@
     <!-- Login function -->
     <script type="text/javascript" src="js/Login Function.js"></script>
     <link rel="stylesheet" type="text/css" href="css/Login Page.css">
+    <link rel="stylesheet" type="text/css" href="css/guideStyle.css">
     <script>
     window.onload = function() {Onload_check();}
     </script>
@@ -66,16 +67,155 @@
       </nav>
     </header>
     <div id="content">
+    <!--check for guide =true or false-->
+    
+    <!--nyp logo-->
+    <div id="guide1" class="guide" class="guide-modal">
+      <div id="guide1pos" class="guide-modal-content">
+        <div class="guide-container">
+
+          <div class="guide-header">
+           <p class="guide-header-text">NYP Forum Logo</p>
+          </div>
+          <p class="guide-text">Start off by clicking on the NYP Forum logo</p>
+          <p class="guide-text">This will bring you back to the main page</p>
+          <p class="guide-text" id="ps">p.s. but it dosen't work now because you are already on the mainpage!</p>
+          <!--next-button-->
+            <ul class="pager">
+              <a href="#" onclick="next1()">Next</a>
+            </ul>
+          <!--next-button end-->
+        </div>
+      </div>
+    </div>
+    <!--nyp logo end-->
+
+    <!--modal main-->
+    <div id="guide2" class="guide" class="guide-modal">
+      <div id="guide2pos" class="guide-modal-content">
+        <div class="guide-container">
+
+          <div class="guide-header">
+           <p class="guide-header-text">Main</p>
+          </div>
+          <p class="guide-text">This button will bring you to the NYP portal
+          where there are more admin stuff</p>
+          <!--next-button-->
+            <ul class="pager">
+              <a href="#" onclick="previous2()">Previous</a>
+              <a href="#" onclick="next2()">Next</a>
+            </ul>
+          <!--next-button end-->
+        </div>
+      </div>
+    </div>
+    <!--moadal main end-->
+
+    <!--tools-->
+    <div id="guide3" class="guide" class="guide-modal">
+      <div id="guide3pos" class="guide-modal-content">
+        <div class="guide-container">
+
+          <div class="guide-header">
+           <p class="guide-header-text">Info</p>
+          </div>
+          <p class="guide-text">check out our GPA Claculator </p>
+         <!--next-button-->
+            <ul class="pager">
+              <a href="#" onclick="previous3()">Previous</a>
+              <a href="#" onclick="next3()">Next</a>
+            </ul>
+          <!--next-button end-->
+        </div>
+      </div>
+    </div>
+    <!--tools end-->
+
+    <!--login-->
+     <div id="guide4" class="guide" class="guide-modal">
+       <div id="guide4pos" class="guide-modal-content">
+         <div class="guide-container">
+
+          <div class="guide-header">
+            <p class="guide-header-text">Login</p>
+           </div>
+           <p class="guide-text">Login to post and comment on threads!</p>
+          <!--next-button-->
+            <ul class="pager">
+              <a href="#" onclick="previous4()">Previous</a>
+              <a href="#" onclick="next4()">Next</a>
+            </ul>
+          <!--next-button end-->
+         </div>
+       </div>
+    </div>
+    <!--login end-->
+
+    <!--visit threads-->
+      <div id="guide6" class="guide" class="guide-modal">
+        <div id="guide6pos" class="guide-modal-content">
+          <div class="guide-container">
+
+            <div class="guide-header">
+              <p class="guide-header-text">Academics and CCAs</p>
+            </div>
+            <p class="guide-text">click on what you are interested in and see what are the hot topics of discussion</p>
+            <!--next-button-->
+            <ul class="pager">
+              <a href="#" onclick="previous6()">Previous</a>
+              <a href="#" onclick="next6()">Next</a>
+            </ul>
+            <!--next-button end-->
+          </div>
+        </div>
+      </div>
+    <!--visit threads end-->
+    
+    <!--threads-->
+      <div id="guide7" class="guide" class="guide-modal">
+        <div id="guide7pos" class="guide-modal-content">
+          <div class="guide-container">
+
+            <div class="guide-header">
+              <p class="guide-header-text">End Of Tutorial</p>
+            </div>
+            <p class="guide-text" id="finish">Have fun browsing NYP Forum!</p>
+
+            <ul class="pager">
+              <a href="#" onclick="previous7()">Previous</a>
+              <a href="#" onclick="endGuide()">Finish</a>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    <!--threads end-->
+       
     <!--Banner-->
+        <!--<div>
+          <img id="black" src="img/schools_BG/black.jpg" alt="Blackout">
+        </div>-->
       <section id="slideshow">
         <div>
-          <img class="mySlides" src="img/img1.jpg" alt="Banner Image 1">
+          <img class="mySlides" src="img/schools_BG/seg.jpg" alt="Banner Image 1">
+        </div>
+        <div>
+          <img class="mySlides" src="img/schools_BG/sit.jpg" alt="Banner Image 2">
+        </div>
+        <div>
+          <img class="mySlides" src="img/schools_BG/sdn.jpg" alt="Banner Image 3">
+        </div>
+        <div>
+          <img class="mySlides" src="img/schools_BG/sbm.jpg" alt="Banner Image 4">
         </div>  
         <div>
-          <img class="mySlides" src="img/img2.jpg" alt="Banner Image 2">
+          <img class="mySlides" src="img/schools_BG/shs.jpg" alt="Banner Image 5">
         </div>  
         <div>
-          <img class="mySlides" src="img/img3.jpg" alt="Banner Image 3">
+          <img class="mySlides" src="img/schools_BG/scl.jpg" alt="Banner Image 6">
+        </div>  
+        <div>
+          <img class="mySlides" src="img/schools_BG/sidm.jpg" alt="Banner Image 7">
         </div>  
       </section>
       <script>
@@ -94,7 +234,7 @@
             setTimeout(carousel, 2500);
         }
       </script>
-      <!--Banner-->
+    <!--Banner end-->
       <section>
         <aside id="menu_container">
           <ul id="menulist">
@@ -509,5 +649,6 @@
 
   		<div id="Chatbox_toggle_BG"></div>
   	</div>
+    <script type="text/javascript" src="js/guide.js"></script>
 </body>
 </html>

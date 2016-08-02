@@ -5,12 +5,12 @@ function Login_submit() {
 
 function Logout_submit() {
 	localStorage.removeItem("Name");
-	location.reload(); 
+	location.reload();
 }
 
 function Onload_check() {
 	if(localStorage.getItem("Name") != null) {
-		//show chatbox, logout button, username
+		//show chatbox, logout button, username, post button
 		document.getElementById("Chatbox_toggle").style.display = "block";
 		document.getElementById("Logout_button").style.display = "inline-block";
 		document.getElementById("username").innerHTML = "Welcome " + localStorage.getItem("Name");
@@ -20,7 +20,7 @@ function Onload_check() {
 	else {
 		//Display login button
 		document.getElementById("Login_button").style.display = "inline-block";
-		//Hide username, logout button, hide chatbox
+		//Hide username, logout button, hide chatbox, post button
 		document.getElementById("username").style.display = "none"
 		document.getElementById("Logout_button").style.display = "none";
 		document.getElementById("Chatbox_toggle").style.display = "none";

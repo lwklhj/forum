@@ -61,12 +61,59 @@ td:hover{
 
 }
 
-@media screen and (max-width: 480px) {
+/* potrait */
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+	#slideshow {display: none;}
+	#menu_container {width: 320px;}
+	#displayBox {float: left; width: 448px;}
+	.courseIcon {width: 145px; height: 145px;}
+	td {height: 100px;}
+	tr {width: 100px;}
+	figcaption {font-size: 15px;}
+}
+
+@media screen and (max-width: 360px) and (orientation: portrait) {
+	#slideshow {display: none;}
+	#menu_container {width: 360px; float: left; clear: both;}
+	#displayBox {float: left; clear: both; width: 360px;}
+	.courseIcon {display: none}
+	td {height: 100px;}
+	tr {width: 360px;}
+	figcaption {font-size: 15px;}
+}
+
+@media screen and (max-width: 320px) and (orientation: portrait) {
 	#slideshow {display: none;}
 	#menu_container {width: 320px;}
 	#displayBox {float: left; width: 320px;}
 	.courseIcon {display: none}
-	td {height: 100px;}
+	td {height: 100px; display: table-row;}
 	tr {width: 320px;}
 	figcaption {font-size: 15px;}
+}
+
+/* landscape */
+@media screen
+and (max-width: 768px)
+and (orientation: landscape) {
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+	#displayBox {float: left;}
+}
+
+@media screen
+and (max-width: 640px)
+and (orientation: landscape) {
+	#slideshow {display: none;}
+	#menu_container {width: 320px; float: left; clear: both;}
+	#displayBox {float: right; width: 320px;}
+	td {height: 100px; display: table-row;}
+	tr {width: 360px;}
+	figcaption {font-size: 15px;}
+}
+
+@media screen
+and (max-width: 480px)
+and (orientation: landscape) {
+	#slideshow {display: none;}
+	td {height: 100px; display: list-item;}
 }

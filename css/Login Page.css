@@ -14,15 +14,29 @@ input.btn {border: #67c1f5 1px solid; padding: 10px; width: 461.6px; border-radi
 
 #Login_confirmation {text-align: center;}
 
-@media screen and (max-width: 480px) {
-	
-#Login_field {width: 100%;}
-
-#Login_field fieldset{width: 304px; margin-left: auto; margin-right: auto;}
-
-#Login_section{width:320px;}
-
-input.textField {border: #67c1f5 1px solid; padding: 10px; width: 260px; border-radius: 3px; margin: 10px;}
-
-input.btn {border: #67c1f5 1px solid; padding: 10px; width: 282px; border-radius: 3px; margin: 10px;}
+/* potrait */
+@media screen and (max-width: 1024px) {
+	#Login_field {width: 100%;}
+	#Login_field fieldset{width: 304px; margin-left: auto; margin-right: auto;}
+	#Login_section{width:1024px;}
+	input.textField {border: #67c1f5 1px solid; padding: 10px; width: 260px; border-radius: 3px; margin: 10px;}
+	input.btn {border: #67c1f5 1px solid; padding: 10px; width: 282px; border-radius: 3px; margin: 10px;}
 }
+
+@media screen and (max-width: 360px) {
+	#Login_field {width: 360px;}
+	#Login_field fieldset{width: 304px; margin-left: auto; margin-right: auto;}
+	#Login_section{width:360px;}
+	input.textField {border: #67c1f5 1px solid; padding: 10px; width: 260px; border-radius: 3px; margin: 10px;}
+	input.btn {border: #67c1f5 1px solid; padding: 10px; width: 282px; border-radius: 3px; margin: 10px;}
+}
+
+@media screen and (max-width: 320px) {
+	#Login_field {width: 320px;}
+	#Login_field fieldset{width: 304px; margin-left: auto; margin-right: auto;}
+	#Login_section{width:320px;}
+	input.textField {border: #67c1f5 1px solid; padding: 10px; width: 260px; border-radius: 3px; margin: 10px;}
+	input.btn {border: #67c1f5 1px solid; padding: 10px; width: 282px; border-radius: 3px; margin: 10px;}
+}
+
+/* landscape */

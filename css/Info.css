@@ -49,13 +49,35 @@ input.submit_btn {border: 1px solid #bdc7d8; padding: 8px 10px; border-radius: 5
 
 #right_aside select option{font-size: 18px; padding: 8px 10px;}
 
+@media screen and (max-width: 1024px) {
+	#content {float: left; width:1024px;}
+	#switch_1 {width: 964px;}
+	#switch_2 {width:964px; height: 720px;}
+	input.textField {width:864px;}
+	input.submit_btn {width: 886px;}
+	.txtarea {width:874px;}
+	#left_aside select {width: 886px;}
+	#left_aside {width: 864px; margin-bottom: 0px;}
+	#right_aside {width: 864px; float: left; clear: both; margin-bottom: 50px;}
+	#right_aside select {width: 886px;}
+}
 
+/* potrait */
+@media screen and (max-width: 360px) {
+	#content {float: left; width:360px;}
+	#switch_1 {width: 300px;}
+	#switch_2 {width:300px; height: 720px;}
+	#content div h1 {width: 300px;}
+	input.textField {width:240px;}
+	input.submit_btn {width: 262px;}
+	.txtarea {width:250px;}
+	#left_aside select {width: 262px;}
+	#left_aside {width: 240px; margin-bottom: 0px;}
+	#right_aside {width: 240px; float: left; clear: both; margin-bottom: 50px;}
+	#right_aside select {width: 262px;}
+}
 
-
-
-
-
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 320px) {
 	#content {float: left; width:320px;}
 	#switch_1 {width: 260px;}
 	#switch_2 {width:260px; height: 720px;}
@@ -68,3 +90,5 @@ input.submit_btn {border: 1px solid #bdc7d8; padding: 8px 10px; border-radius: 5
 	#right_aside {width: 200px; float: left; clear: both; margin-bottom: 50px;}
 	#right_aside select {width: 222px;}
 }
+
+/* landscape */

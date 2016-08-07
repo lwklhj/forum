@@ -86,10 +86,64 @@ footer{
   clear:both;
 }
 
-@media screen and (max-width: 480px) {
+/* potrait */
+@media screen
+and (max-width: 1024px)
+and (orientation: portrait) {
+	#content {width: 768px;}
+	header nav a {float: left;}
+	header nav ul {float: right;}
+	nav,section{width: 768px;}
+	footer div {width: 768px;}
+}
+
+@media screen
+and (max-width: 360px)
+and (orientation: portrait) {
+	#content {width: 360px;}
+	header nav a {float: left;}
+	header nav ul {float: left; clear: both; background-color: #171A21; width: 360px; text-align: center;}
+	nav,section{width: 360;}
+	footer div {width: 360px;}
+}
+
+@media screen
+and (max-width: 320px)
+and (orientation: portrait) {
 	#content {width: 320px;}
 	header nav a {float: left;}
 	header nav ul {float: left; clear: both; background-color: #171A21; width: 320px; text-align: center;}
 	nav,section{width: 320px;}
 	footer div {width: 320px;}
+}
+
+/* landscape */
+@media screen
+and (max-width: 768px)
+and (orientation: landscape) {
+	#content {width: 768px;}
+	header nav a {float: left;}
+	header nav ul {float: right;}
+	nav,section{width: 768px;}
+	footer div {width: 768px;}
+}
+
+@media screen
+and (max-width: 640px)
+and (orientation: landscape) {
+	#content {width: 640px;}
+	header nav a {float: left;}
+	header nav ul {float: left; clear: both; background-color: #171A21; width: 640px; text-align: center;}
+	nav,section{width: 640px;}
+	footer div {width: 640px;}
+}
+
+@media screen
+and (max-width: 480px)
+and (orientation: landscape) {
+	#content {width: 480px;}
+	header nav a {float: left;}
+	header nav ul {float: left; clear: both; background-color: #171A21; width: 480px; text-align: center;}
+	nav,section{width: 480px;}
+	footer div {width: 480px;}
 }
